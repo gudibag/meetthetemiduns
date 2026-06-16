@@ -112,10 +112,15 @@ nav.scrolled {
 .hero-bg {
   position: absolute; inset: 0;
   background:
+    linear-gradient(160deg, rgba(253,248,242,.85) 0%, rgba(232,245,243,.55) 40%, rgba(253,243,238,.55) 70%, rgba(253,248,242,.85) 100%),
     radial-gradient(ellipse at 20% 80%, rgba(44,184,176,.15) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 20%, rgba(200,150,12,.12) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(242,184,154,.1) 0%, transparent 60%),
-    linear-gradient(160deg, #FDF8F2 0%, #E8F5F3 40%, #FDF3EE 70%, #FDF8F2 100%);
+    url('images/IMG_5515.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 .hero-floral {
   position:absolute; pointer-events:none;
@@ -234,6 +239,17 @@ section { padding: 100px 24px; }
   color:var(--teal-dk); margin-bottom:12px;
 }
 .timeline-text { font-size:.88rem; color:var(--mid); line-height:1.8; }
+.timeline-subcard {
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(26,122,110,.12);
+  margin-top: 20px;
+}
+.timeline-subcard:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+.timeline-subtitle {
+  font-family: var(--font-sans); font-size: .9rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--teal-dk); margin-bottom: 14px;
+}
 
 /* ─── EVENTS ─────────────────────────────────────────────────────────────── */
 #events { background: var(--cream); }
@@ -422,24 +438,47 @@ section { padding: 100px 24px; }
 #gallery { background:var(--cream); }
 .gallery-grid {
   margin-top:52px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-template-rows:repeat(3,200px);
-  gap:12px;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 24px;
 }
-.gallery-slot {
-  border-radius:14px; overflow:hidden;
-  background:linear-gradient(135deg, var(--teal-lt), var(--gold-lt));
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  cursor:pointer; transition:transform .3s, box-shadow .3s;
-  position:relative;
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .8s ease;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
 }
-.gallery-slot:nth-child(1) { grid-row:span 2; }
-.gallery-slot:nth-child(5) { grid-column:span 2; }
-.gallery-slot:hover { transform:scale(1.02); box-shadow:0 12px 32px rgba(26,122,110,.2); }
-.gallery-slot img { width:100%; height:100%; object-fit:cover; display:block; }
-.gallery-slot-icon { font-size:2rem; color:var(--teal); opacity:.6; }
-.gallery-slot-text { font-size:.75rem; color:var(--light); margin-top:8px; letter-spacing:.08em; }
+.gallery-slide.active { opacity: 1; pointer-events: auto; z-index: 2; }
+.gallery-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+.gallery-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(26,122,110,.45);
+  cursor: pointer;
+  transition: transform .2s, background .2s;
+}
+.gallery-dot.active {
+  background: var(--teal);
+  transform: scale(1.1);
+}
 
 /* ─── TRAVEL ─────────────────────────────────────────────────────────────── */
 #travel { background:var(--teal-lt); }
@@ -697,28 +736,40 @@ footer {
     <div class="timeline">
       <div class="timeline-card reveal">
         <div class="timeline-icon">🌟</div>
-        <div class="timeline-date">[DATE WE MET]</div>
+        <div class="timeline-date">February — A Thursday</div>
         <div class="timeline-title">How We Met</div>
-        <p class="timeline-text">[Tell the story of how you and Temitope first crossed paths. Was it at church, work, or through a mutual friend? Share that first impression here.]</p>
+        <div class="timeline-subcard">
+          <div class="timeline-subtitle">His POV</div>
+          <p class="timeline-text">I got her number from her sister that fateful day. She posted her picture for her birthday on WhatsApp status.</p>
+          <p class="timeline-text">Something in me said — call, don't text. So I did.</p>
+          <p class="timeline-text">She picked up. I said, &ldquo;Hello, this is Goodness.&rdquo;</p>
+          <p class="timeline-text">We talked. Just like that. I remember thinking — this is easy. Not in a careless way. In a rare way. The kind of easy that you don't manufacture. Those kairos moments you don't plan for.</p>
+          <p class="timeline-text">I called the next day. Not because I had a plan. Just because I wanted to.</p>
+          <p class="timeline-text">Those calls became our thing. Even when everyone was in bed, we'd just talk. Work dramas, random thoughts, aspirations. I was learning her without even trying. And somewhere in those midnight conversations, without making any announcements about it, I knew she was going to be important to me.</p>
+          <p class="timeline-text">When we finally met in person it confirmed what I already felt. She was exactly herself. No performance. Just her. And that peace — that's the thing I can't fully explain. Being around her just settles something in me.</p>
+          <p class="timeline-text">There were beautiful seasons. There were hard ones too. But God kept showing up in the middle of all of it, threading things together in ways none of us could have scripted.</p>
+          <p class="timeline-text">When it was time, I said it plainly. No games. No hints. Just this is who I am, this is what I want, and I want it with you.</p>
+          <p class="timeline-text">She said yes. And honestly, everything since has just felt like grace.</p>
+          <p class="timeline-text">From a birthday call I almost didn't make to a lifetime I can't imagine any other way.</p>
+          <p class="timeline-text">God can be trusted to finish what he starts.</p>
+        </div>
+        <div class="timeline-subcard">
+          <div class="timeline-subtitle">Her POV</div>
+          <p class="timeline-text">It’s a special Thursday evening, sometime in February, which was my birthday. I was receiving calls from family and friends, with gifts. Then my phone rings and a deep voice says &ldquo;Hello, this is Goodness.&rdquo; And I was thinking &ldquo;Goodness? That’s a name, not a greeting 😂&rdquo;</p>
+          <p class="timeline-text">But then we talk. And talk. About random things, real things, dreams. No awkward silences, just… ease. The next day he calls again. Then again. Those short “birthday check-ins” turned into our daily 12am conversations. Months of just getting to know each other’s hearts before he ever asked me out.</p>
+          <p class="timeline-text">Later on, our online conversations led to us meeting physically now and then through our busy schedules, and it’s been wonderful.</p>
+          <p class="timeline-text">Then he finally said his intentions straight, no games. Just honest and safe at the same time.</p>
+          <p class="timeline-text">There were sweet moments. There were ups and downs. But through it all, God kept weaving us together.</p>
+          <p class="timeline-text">A year later, heart pounding as he proposed. From “this is Goodness” to “will you marry me” — and I gave a sweet “yes”.</p>
+          <p class="timeline-text">Now by His grace, we’re becoming one in the love. A love that starts with a birthday call and ends at the altar… God is really wonderful.</p>
+        </div>
       </div>
       <div class="timeline-card reveal">
-        <div class="timeline-icon">☕</div>
-        <div class="timeline-date">[FIRST DATE]</div>
-        <div class="timeline-title">The First Date</div>
-        <p class="timeline-text">[Describe your first date — where you went, what you talked about, and the moment you knew this person was something special.]</p>
-      </div>
-      <div class="timeline-card reveal">
-        <div class="timeline-icon">💍</div>
-        <div class="timeline-date">[PROPOSAL DATE]</div>
-        <div class="timeline-title">The Proposal</div>
-        <p class="timeline-text">[Tell the proposal story! Where were you? How did it happen? What did Temitope say when you got down on one knee?]</p>
-      </div>
-      <div class="timeline-card reveal">
-        <div class="timeline-icon">🥂</div>
-        <div class="timeline-date">November 20, 2026</div>
-        <div class="timeline-title">The Wedding</div>
-        <p class="timeline-text">And now, surrounded by everyone we love, we begin forever. Ondo Town, Nigeria — November 2026. We can't wait to celebrate with you.</p>
-      </div>
+          <div class="timeline-icon">🥂</div>
+          <div class="timeline-date">November 20, 2026</div>
+          <div class="timeline-title">The Wedding (Both Ceremonies)</div>
+          <p class="timeline-text">And now, surrounded by everyone we love, we begin forever. Ondo Town, Nigeria — November 20, 2026. Both the Traditional (8:00 AM) and White ceremonies will take place on this day. We can't wait to celebrate with you.</p>
+        </div>
     </div>
   </div>
 </section>
@@ -728,36 +779,11 @@ footer {
   <div class="section-inner">
     <div class="section-label">Save the dates</div>
     <h2 class="section-title">The <em>Celebrations</em></h2>
-    <p class="section-sub">Two beautiful ceremonies, one unforgettable union. We'd love for you to join us at both.</p>
+    <p class="section-sub">Two beautiful ceremonies on November 20, 2026 — Traditional (8:00 AM) and White (time TBC). We'd love for you to join us at both.</p>
     <div class="event-cards">
       <div class="event-card reveal">
         <div class="event-card-header">
           <div class="event-type">Day One</div>
-          <div class="event-name">Traditional<br>Wedding</div>
-        </div>
-        <div class="event-card-body">
-          <div class="event-detail">
-            <span class="event-detail-icon">📅</span>
-            <div class="event-detail-text"><strong>[TRADITIONAL DATE]</strong>November 2026</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">⏰</span>
-            <div class="event-detail-text"><strong>[TIME]</strong>Time to be confirmed</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">📍</span>
-            <div class="event-detail-text"><strong>[VENUE NAME]</strong>[VENUE ADDRESS], Ondo Town, Nigeria</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">👗</span>
-            <div class="event-detail-text"><strong>Dress Code</strong>Aso-Ebi / Traditional Attire</div>
-          </div>
-          <button class="btn-cal" onclick="downloadICS('Traditional Wedding','[TRADITIONAL DATE]')">+ Add to Calendar</button>
-        </div>
-      </div>
-      <div class="event-card reveal">
-        <div class="event-card-header">
-          <div class="event-type">Day Two</div>
           <div class="event-name">White<br>Wedding</div>
         </div>
         <div class="event-card-body">
@@ -771,13 +797,38 @@ footer {
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">⛪</span>
-            <div class="event-detail-text"><strong>[CHURCH NAME]</strong>[CHURCH ADDRESS], Ondo Town, Nigeria</div>
+            <div class="event-detail-text"><strong>Our Lady of Lourdes Catholic Church</strong>Akinjagunla, Ondo City</div>
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">👗</span>
             <div class="event-detail-text"><strong>Dress Code</strong>Formal / Semi-formal</div>
           </div>
           <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261120')">+ Add to Calendar</button>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-type">Day One</div>
+          <div class="event-name">Traditional<br>Wedding</div>
+        </div>
+        <div class="event-card-body">
+          <div class="event-detail">
+            <span class="event-detail-icon">📅</span>
+            <div class="event-detail-text"><strong>November 20, 2026</strong>Traditional Wedding</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">⏰</span>
+            <div class="event-detail-text"><strong>8:00 AM</strong>Start time</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">📍</span>
+            <div class="event-detail-text"><strong>Labim Hotel</strong>Ondo Town, Nigeria</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">👗</span>
+            <div class="event-detail-text"><strong>Dress Code</strong>Aso-Ebi / Traditional Attire</div>
+          </div>
+          <button class="btn-cal" onclick="downloadICS('Traditional Wedding','20261120')">+ Add to Calendar</button>
         </div>
       </div>
     </div>
@@ -806,9 +857,9 @@ footer {
         </div>
         <div class="form-row">
           <div class="form-group" id="fg-email">
-            <label>Email Address *</label>
+            <label>Email Address (optional)</label>
             <input type="email" id="rsvp-email" placeholder="you@example.com">
-            <span class="form-error">Please enter a valid email</span>
+            <span class="form-error">Please enter a valid email if provided</span>
           </div>
           <div class="form-group">
             <label>Phone Number</label>
@@ -909,40 +960,7 @@ footer {
     <div class="section-label">Our moments</div>
     <h2 class="section-title">Our <em>Gallery</em></h2>
     <p class="section-sub">Photos from our journey together. More to come as we approach the big day!</p>
-    <div class="gallery-grid">
-      <div class="gallery-slot" onclick="openLightbox(0)">
-        <img src="images/IMG_5515.JPG" alt="Gallery photo 1">
-      </div>
-      <div class="gallery-slot" onclick="openLightbox(1)">
-        <img src="images/IMG_5517.JPG" alt="Gallery photo 2">
-      </div>
-      <div class="gallery-slot" onclick="openLightbox(2)">
-        <img src="images/IMG_5519.JPG" alt="Gallery photo 3">
-      </div>
-      <div class="gallery-slot" onclick="openLightbox(3)">
-        <img src="images/IMG_5521.JPG" alt="Gallery photo 4">
-      </div>
-      <div class="gallery-slot">
-        <span class="gallery-slot-icon">📷</span>
-        <span class="gallery-slot-text">More photos coming soon</span>
-      </div>
-      <div class="gallery-slot">
-        <span class="gallery-slot-icon">📷</span>
-        <span class="gallery-slot-text">More photos coming soon</span>
-      </div>
-      <div class="gallery-slot">
-        <span class="gallery-slot-icon">📷</span>
-        <span class="gallery-slot-text">More photos coming soon</span>
-      </div>
-      <div class="gallery-slot">
-        <span class="gallery-slot-icon">📷</span>
-        <span class="gallery-slot-text">More photos coming soon</span>
-      </div>
-      <div class="gallery-slot">
-        <span class="gallery-slot-icon">📷</span>
-        <span class="gallery-slot-text">More photos coming soon</span>
-      </div>
-    </div>
+    <div class="gallery-grid" id="gallerySlider"></div>
   </div>
 </section>
 
@@ -1093,7 +1111,7 @@ footer {
 <script>
 // ── COUNTDOWN ────────────────────────────────────────────────────────────────
 (function countdown() {
-  const target = new Date('2026-11-02T10:00:00');
+  const target = new Date('2026-11-20T10:00:00');
   function tick() {
     const now = new Date();
     const diff = target - now;
@@ -1164,8 +1182,14 @@ document.getElementById('rsvpForm')?.addEventListener('submit', async function(e
   if (!firstname.value.trim()) valid = false;
   fg_lastname.classList.toggle('has-error', !lastname.value.trim());
   if (!lastname.value.trim()) valid = false;
-  fg_email.classList.toggle('has-error', !/\S+@\S+\.\S+/.test(email.value));
-  if (!/\S+@\S+\.\S+/.test(email.value)) valid = false;
+  const emailVal = email.value.trim();
+  if (emailVal) {
+    const emailValid = /\S+@\S+\.\S+/.test(emailVal);
+    fg_email.classList.toggle('has-error', !emailValid);
+    if (!emailValid) valid = false;
+  } else {
+    fg_email.classList.remove('has-error');
+  }
   if (!valid) return;
 
   // Check localStorage — prevent double submission on same device
@@ -1247,10 +1271,12 @@ function showWishlistModal(name,desc,price) {
 
 // ── LIGHTBOX ───────────────────────────────────────────────────────────────────
 const galleryImages = [
-  'images/IMG_5515.JPG',
-  'images/IMG_5517.JPG',
-  'images/IMG_5519.JPG',
-  'images/IMG_5521.JPG'
+  'images/resized/1600x1067/20260529_131019.jpg',
+  'images/resized/1600x1067/20260529_132151.jpg',
+  'images/resized/1600x1067/IMG_5515.JPG',
+  'images/resized/1600x1067/IMG_5519.JPG',
+  'images/resized/1600x1067/IMG_5566.JPG',
+  'images/resized/1600x1067/IMG_5570.JPG'
 ];
 
 function openLightbox(i) {
@@ -1260,10 +1286,100 @@ function openLightbox(i) {
   const text = modal.querySelector('.modal-text');
   const src = galleryImages[i] || galleryImages[0];
 
-  icon.innerHTML = `<img src="${src}" alt="Gallery photo ${i + 1}" style="width:100%;max-height:60vh;object-fit:cover;border-radius:16px;">`;
+  // Show full image sized to viewport while preserving aspect ratio
+  icon.innerHTML = `<img src="${src}" alt="Gallery photo ${i + 1}" style="max-width:90vw;max-height:90vh;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;border-radius:8px;">`;
   title.textContent = `Photo ${i + 1}`;
   text.textContent = 'Tap outside or press × to close.';
   openModal('lightboxModal');
+}
+
+// ── GALLERY SLIDESHOW ──────────────────────────────────────────────────────
+let gallerySlides = [];
+let galleryDots = null;
+let currentGalleryIndex = 0;
+
+function setGallerySlide(index) {
+  gallerySlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  if (galleryDots) {
+    Array.from(galleryDots.children).forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+  currentGalleryIndex = index;
+}
+
+function createGalleryDots() {
+  if (!galleryDots) return;
+  galleryImages.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => setGallerySlide(i));
+    galleryDots.appendChild(dot);
+  });
+}
+
+function renderGallerySlides() {
+  const container = document.getElementById('gallerySlider');
+  if (!container) return;
+  container.innerHTML = '';
+
+  galleryImages.forEach((src, index) => {
+    const slide = document.createElement('button');
+    slide.type = 'button';
+    slide.className = 'gallery-slide' + (index === 0 ? ' active' : '');
+    slide.style.backgroundImage = `url('${src}')`;
+    slide.setAttribute('aria-label', `Open photo ${index + 1}`);
+    slide.setAttribute('tabindex', '0');
+    slide.addEventListener('click', () => openLightbox(index));
+    slide.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(index);
+      }
+    });
+    container.appendChild(slide);
+  });
+
+  const dotWrapper = document.createElement('div');
+  dotWrapper.id = 'galleryDots';
+  dotWrapper.className = 'gallery-dots';
+  container.appendChild(dotWrapper);
+}
+
+function startGallerySlideshow() {
+  renderGallerySlides();
+  gallerySlides = Array.from(document.querySelectorAll('.gallery-slide'));
+  galleryDots = document.getElementById('galleryDots');
+  const container = document.getElementById('gallerySlider');
+  if (!gallerySlides.length || !galleryDots || !container) return;
+  createGalleryDots();
+
+  setGallerySlide(0);
+
+  // Autoplay timer (can be paused on hover)
+  let slideshowTimer = null;
+  const advance = () => {
+    const nextIndex = (currentGalleryIndex + 1) % gallerySlides.length;
+    setGallerySlide(nextIndex);
+  };
+  const startTimer = () => { if (!slideshowTimer) slideshowTimer = setInterval(advance, 4500); };
+  const stopTimer  = () => { if (slideshowTimer) { clearInterval(slideshowTimer); slideshowTimer = null; } };
+
+  // Start autoplay
+  startTimer();
+
+  // Pause on hover / resume on leave
+  container.addEventListener('mouseenter', stopTimer);
+  container.addEventListener('mouseleave', startTimer);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startGallerySlideshow);
+} else {
+  startGallerySlideshow();
 }
 
 // ── ICS DOWNLOAD ──────────────────────────────────────────────────────────────
