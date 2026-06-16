@@ -672,7 +672,7 @@ footer {
       <em>Dunsin</em>
     </h1>
     <div class="divider-flourish"></div>
-    <p class="hero-date">November 21, 2026 &nbsp;·&nbsp; Ondo Town, Nigeria</p>
+    <p class="hero-date">November 20, 2026 &nbsp;·&nbsp; Ondo Town, Nigeria</p>
     <p class="hero-hashtag">We're getting married!</p>
     <div style="height:36px"></div>
     <div class="countdown" id="countdown">
@@ -715,7 +715,7 @@ footer {
       </div>
       <div class="timeline-card reveal">
         <div class="timeline-icon">🥂</div>
-        <div class="timeline-date">November 21, 2026</div>
+        <div class="timeline-date">November 20, 2026</div>
         <div class="timeline-title">The Wedding</div>
         <p class="timeline-text">And now, surrounded by everyone we love, we begin forever. Ondo Town, Nigeria — November 2026. We can't wait to celebrate with you.</p>
       </div>
@@ -763,7 +763,7 @@ footer {
         <div class="event-card-body">
           <div class="event-detail">
             <span class="event-detail-icon">📅</span>
-            <div class="event-detail-text"><strong>November 21, 2026</strong>White Wedding</div>
+            <div class="event-detail-text"><strong>November 20, 2026</strong>White Wedding</div>
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">⏰</span>
@@ -777,7 +777,7 @@ footer {
             <span class="event-detail-icon">👗</span>
             <div class="event-detail-text"><strong>Dress Code</strong>Formal / Semi-formal</div>
           </div>
-          <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261121')">+ Add to Calendar</button>
+          <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261120')">+ Add to Calendar</button>
         </div>
       </div>
     </div>
@@ -793,49 +793,31 @@ footer {
     <div id="rsvpWrapper">
       <form class="rsvp-form" id="rsvpForm" novalidate>
         <div class="form-row">
-          <div class="form-group" id="fg-name">
-            <label>Full Name *</label>
-            <input type="text" id="rsvp-name" placeholder="Your full name">
-            <span class="form-error">Please enter your name</span>
+          <div class="form-group" id="fg-firstname">
+            <label>First Name *</label>
+            <input type="text" id="rsvp-firstname" placeholder="First name">
+            <span class="form-error">Please enter your first name</span>
           </div>
-          <div class="form-group" id="fg-email">
-            <label>Email Address *</label>
-            <input type="email" id="rsvp-email" placeholder="your@email.com">
-            <span class="form-error">Please enter a valid email</span>
+          <div class="form-group" id="fg-lastname">
+            <label>Last Name *</label>
+            <input type="text" id="rsvp-lastname" placeholder="Last name">
+            <span class="form-error">Please enter your last name</span>
           </div>
         </div>
         <div class="form-row">
+          <div class="form-group" id="fg-email">
+            <label>Email Address *</label>
+            <input type="email" id="rsvp-email" placeholder="you@example.com">
+            <span class="form-error">Please enter a valid email</span>
+          </div>
           <div class="form-group">
             <label>Phone Number</label>
             <input type="tel" id="rsvp-phone" placeholder="+234 ...">
           </div>
-          <div class="form-group">
-            <label>Number of Guests</label>
-            <select id="rsvp-guests">
-              <option value="1">1 (just me)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group" id="fg-events">
-          <label>Which event(s) will you attend? *</label>
-          <div class="checkbox-group">
-            <label class="checkbox-label"><input type="checkbox" name="events" value="traditional"> Traditional Wedding</label>
-            <label class="checkbox-label"><input type="checkbox" name="events" value="white"> White Wedding</label>
-            <label class="checkbox-label"><input type="checkbox" name="events" value="both"> Both 🎉</label>
-          </div>
-          <span class="form-error" id="events-error">Please select at least one event</span>
-        </div>
-        <div class="form-group">
-          <label>Dietary Requirements / Allergies</label>
-          <textarea id="rsvp-diet" placeholder="Any dietary restrictions or allergies we should know about?"></textarea>
         </div>
         <div class="form-group">
           <label>Message to the Couple</label>
-          <textarea id="rsvp-msg" placeholder="Share your well wishes, a fond memory, or just say hello! 💛"></textarea>
+          <textarea id="rsvp-msg" placeholder="Share a note, congratulations, or anything you'd like us to know."></textarea>
         </div>
         <button type="submit" class="btn-rsvp">Confirm My Attendance ✨</button>
       </form>
@@ -1061,7 +1043,7 @@ footer {
     <a href="https://twitter.com/[INSTAGRAM HANDLE]" target="_blank" class="social-btn" title="Twitter / X">𝕏</a>
     <a href="[WHATSAPP GROUP LINK]" target="_blank" class="social-btn" title="WhatsApp">💬</a>
   </div>
-  <p class="footer-copy">Made with 💛 for Goodness & Temitope · November 21, 2026 · Ondo Town, Nigeria</p>
+  <p class="footer-copy">Made with 💛 for Goodness & Temitope · November 20, 2026 · Ondo Town, Nigeria</p>
 </footer>
 
 <!-- ── RSVP BADGE ─────────────────────────────────────────────────────────── -->
@@ -1111,7 +1093,7 @@ footer {
 <script>
 // ── COUNTDOWN ────────────────────────────────────────────────────────────────
 (function countdown() {
-  const target = new Date('2026-11-21T10:00:00');
+  const target = new Date('2026-11-02T10:00:00');
   function tick() {
     const now = new Date();
     const diff = target - now;
@@ -1164,56 +1146,81 @@ document.querySelectorAll('.faq-q').forEach(q => {
 });
 
 // ── RSVP ─────────────────────────────────────────────────────────────────────
-const rsvps = JSON.parse(localStorage.getItem('temidunRSVPs') || '[]');
-const userRSVPed = localStorage.getItem('temidunUserRSVPed');
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx8mtEDrT_TA6x4Zi4E-HWJ6ZSm8ksdcGXmT9S-JqarL6bj05Bgxhhz1qBnWHkyGScB/exec';
 
-if(userRSVPed) {
-  document.getElementById('rsvpWrapper').innerHTML = `<div class="rsvp-already">You've already RSVPed! 🎉<br><span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
-}
-updateBadge();
-
-document.getElementById('rsvpForm')?.addEventListener('submit', function(e) {
+document.getElementById('rsvpForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
+
+  // Validation
   let valid = true;
-  const name = document.getElementById('rsvp-name');
-  const email = document.getElementById('rsvp-email');
-  const fg_name = document.getElementById('fg-name');
-  const fg_email = document.getElementById('fg-email');
-  const eventsErr = document.getElementById('events-error');
-  const checked = [...document.querySelectorAll('input[name=events]:checked')].map(c=>c.value);
+  const firstname  = document.getElementById('rsvp-firstname');
+  const lastname   = document.getElementById('rsvp-lastname');
+  const email      = document.getElementById('rsvp-email');
+  const fg_firstname  = document.getElementById('fg-firstname');
+  const fg_lastname   = document.getElementById('fg-lastname');
+  const fg_email      = document.getElementById('fg-email');
 
-  fg_name.classList.toggle('has-error', !name.value.trim()); if(!name.value.trim()) valid=false;
-  fg_email.classList.toggle('has-error', !/\S+@\S+\.\S+/.test(email.value)); if(!/\S+@\S+\.\S+/.test(email.value)) valid=false;
-  eventsErr.style.display = checked.length ? 'none' : 'block'; if(!checked.length) valid=false;
+  fg_firstname.classList.toggle('has-error', !firstname.value.trim());
+  if (!firstname.value.trim()) valid = false;
+  fg_lastname.classList.toggle('has-error', !lastname.value.trim());
+  if (!lastname.value.trim()) valid = false;
+  fg_email.classList.toggle('has-error', !/\S+@\S+\.\S+/.test(email.value));
+  if (!/\S+@\S+\.\S+/.test(email.value)) valid = false;
+  if (!valid) return;
 
-  if(!valid) return;
+  // Check localStorage — prevent double submission on same device
+  if (localStorage.getItem('temidunUserRSVPed')) {
+    document.getElementById('rsvpWrapper').innerHTML =
+      `<div class="rsvp-already">You've already RSVPed! 🎉<br>
+       <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
+    return;
+  }
 
-  const entry = {
-    name: name.value, email: email.value,
-    phone: document.getElementById('rsvp-phone').value,
-    guests: document.getElementById('rsvp-guests').value,
-    events: checked, diet: document.getElementById('rsvp-diet').value,
-    message: document.getElementById('rsvp-msg').value,
-    timestamp: new Date().toISOString()
-  };
-  rsvps.push(entry);
-  localStorage.setItem('temidunRSVPs', JSON.stringify(rsvps));
-  localStorage.setItem('temidunUserRSVPed','true');
-  updateBadge();
-  openModal('thankYouModal');
-  document.getElementById('rsvpWrapper').innerHTML = `<div class="rsvp-already">You've already RSVPed! 🎉<br><span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
+  // Show loading state
+  const btn = document.querySelector('.btn-rsvp');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const payload = {
+      firstname: firstname.value.trim(),
+      lastname: lastname.value.trim(),
+      email: email.value.trim().toLowerCase(),
+      phone: document.getElementById('rsvp-phone').value.trim(),
+      message: document.getElementById('rsvp-msg').value.trim()
+    };
+
+    const res = await fetch(SHEET_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+    const result = await res.json();
+
+    if (result.status === 'duplicate') {
+      // Already in the Sheet — still mark locally and show thank you
+      localStorage.setItem('temidunUserRSVPed', 'true');
+      openModal('thankYouModal');
+      document.getElementById('rsvpWrapper').innerHTML =
+        `<div class="rsvp-already">You've already RSVPed! 🎉<br>
+         <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
+
+    } else if (result.status === 'success') {
+      localStorage.setItem('temidunUserRSVPed', 'true');
+      openModal('thankYouModal');
+      document.getElementById('rsvpWrapper').innerHTML =
+        `<div class="rsvp-already">You've already RSVPed! 🎉<br>
+         <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
+
+    } else {
+      throw new Error('Unexpected response');
+    }
+
+  } catch (err) {
+    btn.textContent = 'Confirm My Attendance ✨';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again or contact us directly.');
+  }
 });
-
-function updateBadge() {
-  const count = JSON.parse(localStorage.getItem('temidunRSVPs')||'[]').length;
-  const badge = document.getElementById('rsvpBadge');
-  if(count > 0) { badge.style.display='block'; badge.textContent=`${count} RSVP${count>1?'s':''}  ·  Admin`; }
-}
-function getRSVPSummary() {
-  const r = JSON.parse(localStorage.getItem('temidunRSVPs')||'[]');
-  if(!r.length) return 'No RSVPs yet.';
-  return r.map((e,i)=>`${i+1}. ${e.name} (${e.guests} guest${e.guests>1?'s':''}) — ${e.events.join(', ')}`).join('\n');
-}
 
 // ── MODALS ────────────────────────────────────────────────────────────────────
 function openModal(id) { document.getElementById(id).classList.add('open'); }
@@ -1261,7 +1268,7 @@ function openLightbox(i) {
 
 // ── ICS DOWNLOAD ──────────────────────────────────────────────────────────────
 function downloadICS(title, dateStr) {
-  const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261121';
+  const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261120';
   const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Goodness & Temitope\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
   const blob = new Blob([ics],{type:'text/calendar'});
   const a = Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`MeetTheTemiduns_${title.replace(/\s+/g,'_')}.ics`});
