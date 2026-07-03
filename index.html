@@ -7,16 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --teal:    #1A7A6E;
-  --teal-dk: #0D5C52;
-  --teal-lt: #E8F5F3;
-  --gold:    #C8960C;
+  --teal:    #B8767F;
+  --teal-dk: #8B5A63;
+  --teal-lt: #F5EBF0;
+  --gold:    #D4AF37;
   --gold-lt: #F5E8C0;
-  --brown:   #7B4F2E;
-  --brown-lt:#F4EBE1;
+  --brown:   #3E2723;
+  --brown-lt:#E8DFD7;
   --peach:   #F2B89A;
   --peach-lt:#FDF3EE;
-  --turq:    #2CB8B0;
+  --turq:    #C9A877;
   --cream:   #FDF8F2;
   --dark:    #1C1C1C;
   --mid:     #4A4A4A;
@@ -52,7 +52,7 @@ nav {
 }
 nav.scrolled {
   background: rgba(253,248,242,.97);
-  box-shadow: 0 2px 20px rgba(26,122,110,.12);
+  box-shadow: 0 2px 20px rgba(184,118,127,.12);
   backdrop-filter: blur(8px);
 }
 .nav-brand {
@@ -112,9 +112,9 @@ nav.scrolled {
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    linear-gradient(160deg, rgba(253,248,242,.85) 0%, rgba(232,245,243,.55) 40%, rgba(253,243,238,.55) 70%, rgba(253,248,242,.85) 100%),
-    radial-gradient(ellipse at 20% 80%, rgba(44,184,176,.15) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 20%, rgba(200,150,12,.12) 0%, transparent 50%),
+    linear-gradient(160deg, rgba(253,248,242,.85) 0%, rgba(245,235,240,.55) 40%, rgba(253,243,238,.55) 70%, rgba(253,248,242,.85) 100%),
+    radial-gradient(ellipse at 20% 80%, rgba(184,118,127,.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(212,175,55,.12) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(242,184,154,.1) 0%, transparent 60%),
     url('images/IMG_5515.JPG');
   background-size: cover;
@@ -173,7 +173,7 @@ nav.scrolled {
 }
 .countdown-unit {
   display:flex; flex-direction:column; align-items:center;
-  background:rgba(255,255,255,.7); border:1px solid rgba(200,150,12,.2);
+  background:rgba(255,255,255,.7); border:1px solid rgba(212,175,55,.2);
   border-radius:12px; padding:16px 22px; min-width:80px;
   backdrop-filter:blur(6px);
 }
@@ -222,13 +222,13 @@ section { padding: 100px 24px; }
   background:#fff; border-radius:16px;
   padding:36px 28px;
   border-top:3px solid var(--gold);
-  box-shadow:0 4px 24px rgba(123,79,46,.08);
+  box-shadow:0 4px 24px rgba(62,39,35,.08);
   transition: transform .3s, box-shadow .3s;
   opacity:0; transform:translateY(30px);
   transition: opacity .6s, transform .6s, box-shadow .3s;
 }
 .timeline-card.visible { opacity:1; transform:translateY(0); }
-.timeline-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(123,79,46,.14); }
+.timeline-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(62,39,35,.14); }
 .timeline-icon { font-size:2.2rem; margin-bottom:16px; }
 .timeline-date {
   font-size:.72rem; font-weight:600; letter-spacing:.18em;
@@ -241,7 +241,7 @@ section { padding: 100px 24px; }
 .timeline-text { font-size:.88rem; color:var(--mid); line-height:1.8; }
 .timeline-subcard {
   padding: 20px 0 0;
-  border-top: 1px solid rgba(26,122,110,.12);
+  border-top: 1px solid rgba(184,118,127,.12);
   margin-top: 20px;
 }
 .timeline-subcard:first-child { margin-top: 0; border-top: none; padding-top: 0; }
@@ -260,7 +260,7 @@ section { padding: 100px 24px; }
 }
 .event-card {
   border-radius:20px; overflow:hidden;
-  box-shadow:0 6px 30px rgba(26,122,110,.1);
+  box-shadow:0 6px 30px rgba(184,118,127,.1);
   opacity:0; transform:translateY(30px);
   transition:opacity .6s, transform .6s;
 }
@@ -273,7 +273,7 @@ section { padding: 100px 24px; }
   background: linear-gradient(135deg, var(--teal), var(--teal-dk));
 }
 .event-card:nth-child(2) .event-card-header {
-  background: linear-gradient(135deg, var(--brown), #5A3820);
+  background: linear-gradient(135deg, var(--brown), #2C1F1B);
 }
 .event-type {
   font-size:.68rem; font-weight:600; letter-spacing:.2em;
@@ -305,13 +305,13 @@ section { padding: 100px 24px; }
 
 /* ─── RSVP ────────────────────────────────────────────────────────────────── */
 #rsvp {
-  background: linear-gradient(160deg, var(--teal-dk) 0%, #0A4840 100%);
+  background: linear-gradient(160deg, #6B505A 0%, #4A3640 100%);
   position:relative; overflow:hidden;
 }
 #rsvp::before {
   content:''; position:absolute; top:-100px; right:-100px;
   width:500px; height:500px; border-radius:50%;
-  background:rgba(44,184,176,.08);
+  background:rgba(184,118,127,.08);
 }
 #rsvp .section-label { color:var(--peach); }
 #rsvp .section-title { color:#fff; }
@@ -362,7 +362,7 @@ section { padding: 100px 24px; }
 }
 .btn-rsvp {
   width:100%; padding:16px;
-  background:linear-gradient(135deg, var(--gold), #A37A09);
+  background:linear-gradient(135deg, var(--gold), #B8860B);
   border:none; border-radius:12px; cursor:pointer;
   font-family:var(--font-sans); font-size:.9rem; font-weight:600;
   letter-spacing:.1em; text-transform:uppercase; color:#fff;
@@ -389,13 +389,13 @@ section { padding: 100px 24px; }
 .gift-card {
   background:#fff; border-radius:20px; padding:36px 30px;
   border:2px solid transparent;
-  box-shadow:0 4px 24px rgba(123,79,46,.07);
+  box-shadow:0 4px 24px rgba(62,39,35,.07);
   transition:border .3s, transform .3s, box-shadow .3s;
   opacity:0; transform:translateY(30px);
   transition:opacity .6s, transform .6s, border .3s, box-shadow .3s;
 }
 .gift-card.visible { opacity:1; transform:translateY(0); }
-.gift-card:hover { border-color:var(--gold); transform:translateY(-5px); box-shadow:0 16px 40px rgba(123,79,46,.14); }
+.gift-card:hover { border-color:var(--gold); transform:translateY(-5px); box-shadow:0 16px 40px rgba(62,39,35,.14); }
 .gift-card-icon { font-size:2.4rem; margin-bottom:18px; }
 .gift-card-title { font-family:var(--font-serif); font-size:1.55rem; color:var(--teal-dk); margin-bottom:10px; }
 .gift-card-text { font-size:.85rem; color:var(--mid); line-height:1.8; margin-bottom:22px; }
@@ -418,7 +418,7 @@ section { padding: 100px 24px; }
 .wishlist-item {
   background:var(--cream); border-radius:12px; padding:14px 12px;
   text-align:center; cursor:pointer; transition:background .2s;
-  border:1px solid rgba(200,150,12,.15);
+  border:1px solid rgba(212,175,55,.15);
 }
 .wishlist-item:hover { background:var(--gold-lt); }
 .wishlist-item-icon { font-size:1.4rem; margin-bottom:5px; }
@@ -471,7 +471,7 @@ section { padding: 100px 24px; }
   height: 12px;
   border-radius: 50%;
   background: rgba(255,255,255,.55);
-  border: 1px solid rgba(26,122,110,.45);
+  border: 1px solid rgba(184,118,127,.45);
   cursor: pointer;
   transition: transform .2s, background .2s;
 }
@@ -489,7 +489,7 @@ section { padding: 100px 24px; }
 }
 .travel-card {
   background:#fff; border-radius:16px; padding:30px 26px;
-  box-shadow:0 4px 20px rgba(26,122,110,.08);
+  box-shadow:0 4px 20px rgba(184,118,127,.08);
   opacity:0; transform:translateY(20px);
   transition:opacity .6s, transform .6s;
 }
@@ -512,7 +512,7 @@ section { padding: 100px 24px; }
   margin-top:40px; border-radius:18px; overflow:hidden;
   height:280px; background:var(--brown-lt);
   display:flex; align-items:center; justify-content:center;
-  border:2px dashed rgba(123,79,46,.3);
+  border:2px dashed rgba(62,39,35,.3);
 }
 .map-placeholder { text-align:center; color:var(--light); font-size:.85rem; }
 .map-placeholder p { margin-top:10px; }
@@ -572,7 +572,7 @@ footer {
 .footer-divider {
   margin: 0 auto 32px;
   width:200px; height:1px;
-  background:linear-gradient(90deg,transparent,rgba(200,150,12,.6),transparent);
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,.6),transparent);
 }
 
 /* ─── MODALS ─────────────────────────────────────────────────────────────── */
@@ -614,7 +614,7 @@ footer {
   position:fixed; bottom:24px; right:24px; z-index:900;
   background:var(--teal); color:#fff; border-radius:30px;
   padding:10px 18px; font-size:.75rem; font-weight:600;
-  letter-spacing:.08em; box-shadow:0 4px 20px rgba(26,122,110,.3);
+  letter-spacing:.08em; box-shadow:0 4px 20px rgba(184,118,127,.3);
   cursor:pointer; display:none;
 }
 
@@ -890,7 +890,7 @@ footer {
         <p class="gift-card-text">A financial blessing toward building our home together. Every contribution is received with gratitude and prayer.</p>
         <div class="gift-account">
           <strong>Bank:</strong> GTBank<br>
-          <strong>Account Name:</strong> Goodness & Temitope Temidun<br>
+          <strong>Account Name:</strong> Temitope & Dunsin Temidun<br>
           <strong>Account No:</strong> [BANK ACCOUNT NUMBER]
         </div>
         <button class="btn-copy" id="copyBtn" onclick="copyAccount()">
@@ -1053,7 +1053,7 @@ footer {
 
 <!-- ── FOOTER ──────────────────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-names">Goodness & Temitope</div>
+  <div class="footer-names">Temitope & Dunsin</div>
   <div class="footer-hash">#MeetTheTemiduns</div>
   <div class="footer-divider"></div>
   <div class="footer-social">
@@ -1061,7 +1061,7 @@ footer {
     <a href="https://twitter.com/[INSTAGRAM HANDLE]" target="_blank" class="social-btn" title="Twitter / X">𝕏</a>
     <a href="[WHATSAPP GROUP LINK]" target="_blank" class="social-btn" title="WhatsApp">💬</a>
   </div>
-  <p class="footer-copy">Made with 💛 for Goodness & Temitope · November 20, 2026 · Ondo Town, Nigeria</p>
+  <p class="footer-copy">Made with 💛 for Temitope & Dunsin · November 20, 2026 · Ondo Town, Nigeria</p>
 </footer>
 
 <!-- ── RSVP BADGE ─────────────────────────────────────────────────────────── -->
@@ -1101,7 +1101,7 @@ footer {
     <div class="gift-account" style="text-align:left;margin-top:16px">
       <strong>Bank:</strong> GTBank<br>
       <strong>Account:</strong> [BANK ACCOUNT NUMBER]<br>
-      <strong>Name:</strong> Goodness & Temitope Temidun<br>
+      <strong>Name:</strong> Temitope & Dunsin Temidun<br>
       <strong>Reference:</strong> #MeetTheTemiduns Gift
     </div>
     <button class="btn-copy" style="margin-top:12px;width:100%;justify-content:center" onclick="copyAccount();closeModal('wishlistModal')">📋 Copy Account No.</button>
@@ -1384,7 +1384,7 @@ if (document.readyState === 'loading') {
 // ── ICS DOWNLOAD ──────────────────────────────────────────────────────────────
 function downloadICS(title, dateStr) {
   const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261120';
-  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Goodness & Temitope\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
+  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Temitope & Dunsin\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
   const blob = new Blob([ics],{type:'text/calendar'});
   const a = Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`MeetTheTemiduns_${title.replace(/\s+/g,'_')}.ics`});
   a.click();
