@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Registry | #MeetTheTemiduns</title>
+  <style>
+    :root {
+      --cream: #f8efe8;
+      --cream-2: #fffaf4;
+      --peach-lt: #fceee7;
+      --teal: #1f7a6f;
+      --teal-lt: #e6f4f1;
+      --gold: #d4af37;
+      --gold-lt: #f7e9b8;
+      --brown: #4a2d22;
+      --brown-lt: #efe0d4;
+      --mid: #7d6b63;
+      --dark: #221b17;
+      --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --font-sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--dark);
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.18), transparent 34%),
+        linear-gradient(135deg, var(--cream) 0%, var(--cream-2) 100%);
+    }
+    a { color: inherit; text-decoration: none; }
+    .page-shell { max-width: 1200px; margin: 0 auto; padding: 28px 20px 70px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      padding: 32px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 50px rgba(74,45,34,0.08);
+      border: 1px solid rgba(212,175,55,0.2);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--teal-lt);
+      color: var(--teal);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      color: var(--brown);
+    }
+    .hero p { margin: 0 0 18px; color: var(--mid); line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal), var(--gold));
+      color: white;
+      box-shadow: 0 12px 24px rgba(31,122,111,0.18);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--brown);
+      border: 1px solid rgba(74,45,34,0.15);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .hero-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--brown) 0%, var(--teal) 100%);
+      color: white;
+      box-shadow: 0 14px 40px rgba(74,45,34,0.16);
+    }
+    .hero-card h3 { margin: 0 0 10px; font-size: 1.15rem; }
+    .hero-card ul { padding-left: 18px; margin: 0; line-height: 1.8; }
+    .hero-card .small { font-size: 0.9rem; opacity: 0.9; margin-top: 12px; }
+
+    .account-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 22px;
+    }
+    .account-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: white;
+      box-shadow: 0 10px 28px rgba(74,45,34,0.06);
+      border: 1px solid rgba(212,175,55,0.18);
+    }
+    .account-card h4 { margin: 0 0 8px; color: var(--brown); font-family: var(--font-serif); font-size: 1.25rem; }
+    .account-card p { margin: 6px 0; color: var(--mid); line-height: 1.7; }
+    .detail-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .detail-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: var(--cream-2);
+      border: 1px solid rgba(74,45,34,0.08);
+    }
+    .detail-row strong { color: var(--brown); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .detail-value { flex: 1; color: var(--mid); font-size: 0.95rem; word-break: break-word; }
+    .inline-copy-btn {
+      border: none;
+      border-radius: 999px;
+      width: 34px;
+      height: 34px;
+      background: var(--teal);
+      color: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .inline-copy-btn.copied { background: var(--gold); }
+
+    .registry-section {
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 18px 46px rgba(74,45,34,0.06);
+      border: 1px solid rgba(212,175,55,0.14);
+    }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+    .section-heading h2 { margin: 0; font-family: var(--font-serif); color: var(--brown); font-size: 1.7rem; }
+    .section-heading p { margin: 0; color: var(--mid); }
+    .reg-summary { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+    .reg-stat { min-width: 140px; padding: 16px 18px; border-radius: 16px; background: var(--peach-lt); }
+    .reg-stat .n { font-size: 1.5rem; font-weight: 800; color: var(--teal); }
+    .reg-stat .l { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); margin-top: 4px; }
+
+    .registry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .reg-card { border-radius: 24px; overflow: hidden; background: white; border: 1px solid rgba(74,45,34,0.08); box-shadow: 0 10px 26px rgba(74,45,34,0.05); }
+    .reg-card.done { border-color: rgba(31,122,111,0.25); }
+    .reg-thumb { min-height: 120px; padding: 20px; display: flex; align-items: center; justify-content: center; position: relative; font-size: 2.5rem; background: linear-gradient(135deg, var(--teal-lt), var(--gold-lt)); }
+    .reg-tag { position: absolute; top: 12px; right: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.9); color: var(--brown); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+    .reg-body { padding: 18px; }
+    .reg-name { font-family: var(--font-serif); font-size: 1.25rem; color: var(--brown); margin-bottom: 8px; }
+    .reg-desc { color: var(--mid); font-size: 0.92rem; line-height: 1.7; margin: 0 0 14px; }
+    .reg-price { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; color: var(--mid); }
+    .reg-price .amt { font-family: var(--font-serif); font-size: 1.2rem; color: var(--brown); font-weight: 700; }
+    .reg-bar { height: 8px; border-radius: 999px; background: var(--brown-lt); overflow: hidden; margin-bottom: 8px; }
+    .reg-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--teal)); border-radius: inherit; }
+    .reg-prog { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--mid); margin-bottom: 14px; }
+    .reg-btn { width: 100%; border: none; border-radius: 14px; padding: 12px; background: linear-gradient(135deg, var(--gold), #a8790a); color: white; font-weight: 700; cursor: pointer; }
+    .reg-btn.done { background: var(--teal-lt); color: var(--teal); cursor: default; }
+    .reg-loading { padding: 24px; color: var(--mid); text-align: center; }
+
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(17, 17, 17, 0.66);
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      width: min(100%, 460px);
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+    .modal-title { font-family: var(--font-serif); font-size: 1.4rem; color: var(--brown); margin-bottom: 12px; }
+    .modal-text { color: var(--mid); line-height: 1.7; }
+    .modal-close { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; float: right; }
+    .reg-field { margin-top: 12px; }
+    .reg-field label { display: block; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); margin-bottom: 6px; }
+    .reg-field input { width: 100%; padding: 12px 14px; border: 1px solid rgba(74,45,34,0.15); border-radius: 12px; font: inherit; }
+    .reg-acctbox { margin-top: 14px; padding: 14px; border-radius: 16px; background: var(--teal-lt); color: var(--teal); }
+    .reg-acctno { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-weight: 700; }
+    .reg-acctno button { border: none; border-radius: 999px; background: var(--teal); color: white; padding: 7px 12px; cursor: pointer; }
+    .reg-steps, .reg-privacy { margin-top: 12px; color: var(--mid); font-size: 0.85rem; line-height: 1.6; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .registry-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page-shell { padding: 16px 14px 52px; }
+      .hero, .registry-section, .account-card { padding: 18px; }
+      .account-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <a class="back-link" href="index.html">← Back to the wedding page</a>
+        <p class="eyebrow">Gift Registry</p>
+        <h1>Help us build a beautiful new home.</h1>
+        <p>Your presence is already a gift to us. If you’d like to bless us further, this page brings together our registry, account details, and a simple way to contribute.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#registry">Open the registry</a>
+          <a class="btn btn-secondary" href="index.html#rsvp">RSVP</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>How to contribute</h3>
+        <ul>
+          <li>Copy the Naira or USD account details below.</li>
+          <li>Choose a gift item from the registry and tap “Contribute”.</li>
+          <li>Send your transfer with the reference <strong>#MeetTheTemiduns</strong>.</li>
+        </ul>
+        <p class="small">Your gift is private and will be matched once we confirm the transfer.</p>
+      </div>
+    </header>
+
+    <section class="account-grid" aria-label="Bank details">
+      <div class="account-card">
+        <h4>Naira Payments</h4>
+        <div class="detail-list">
+          <div class="detail-row">
+            <strong>Account name</strong>
+            <div class="detail-value">TEMITOPE AWOSIKU</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'name', this)" aria-label="Copy account name">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Account number</strong>
+            <div class="detail-value">3157355320</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'number', this)" aria-label="Copy account number">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Bank name</strong>
+            <div class="detail-value">FIRST BANK</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'bank', this)" aria-label="Copy bank name">📋</button>
+          </div>
+        </div>
+      </div>
+      <div class="account-card">
+        <h4>Dollar Payments</h4>
+        <div class="detail-list">
+          <div class="detail-row">
+            <strong>Account name</strong>
+            <div class="detail-value">GOODNESS DUNSIN FOLAYAN</div>
+            <button class="inline-copy-btn" onclick="copyDetail('dollar', 'name', this)" aria-label="Copy account name">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Account number</strong>
+            <div class="detail-value">218095108511</div>
+            <button class="inline-copy-btn" onclick="copyDetail('dollar', 'number', this)" aria-label="Copy account number">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Routing number</strong>
+            <div class="detail-value">101019644</div>
+            <button class="inline-copy-btn" onclick="copyDetail('dollar', 'routing', this)" aria-label="Copy routing number">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Bank name</strong>
+            <div class="detail-value">LEAD BANK</div>
+            <button class="inline-copy-btn" onclick="copyDetail('dollar', 'bank', this)" aria-label="Copy bank name">📋</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="registry-section" id="registry">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Registry</p>
+          <h2>Choose a gift to bless</h2>
+        </div>
+        <p>Each item helps us build a home filled with love and care.</p>
+      </div>
+      <div class="reg-summary" id="regSummary">
+        <div class="reg-stat"><div class="n" id="sumCount">—</div><div class="l">Gifts</div></div>
+        <div class="reg-stat"><div class="n" id="sumPledged">—</div><div class="l">Pledged</div></div>
+        <div class="reg-stat"><div class="n" id="sumBlessed">—</div><div class="l">Fully Blessed</div></div>
+      </div>
+      <div id="regGrid" class="registry-grid">
+        <div class="reg-loading">Loading the registry…</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal-overlay" id="pledgeModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('pledgeModal')">✕</button>
+      <div class="modal-title" id="plName">Item</div>
+      <p id="plRemaining" class="modal-text"></p>
+      <div class="reg-field">
+        <label>Your Name</label>
+        <input type="text" id="plGiver" placeholder="So we can thank you personally">
+      </div>
+      <div class="reg-field">
+        <label>Amount to give (₦)</label>
+        <input type="number" id="plAmount" placeholder="e.g. 20000" min="500">
+      </div>
+      <div class="reg-acctbox">
+        <div><strong>Naira account</strong></div>
+        <div>TEMITOPE AWOSIKU</div>
+        <div class="reg-acctno"><span>3157355320</span><button onclick="regCopyAcct('naira', this)">Copy</button></div>
+      </div>
+      <p class="reg-steps">1. Transfer to the account above → 2. Tap the button so we can match your gift</p>
+      <button class="btn btn-primary" id="plConfirm" onclick="submitPledge()" style="width:100%;margin-top:10px">💛 I've made my transfer</button>
+      <p class="reg-privacy">Your gift is private — the item only updates once we’ve confirmed your transfer.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thankYouModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('thankYouModal')">✕</button>
+      <div class="modal-title">Thank you — gift noted!</div>
+      <p class="modal-text">Please complete your transfer if you haven’t yet. Once we confirm it, your gift will count toward the item.</p>
+    </div>
+  </div>
+
+  <script>
+    const ACCOUNT_DETAILS = {
+      naira: {
+        full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK',
+        name: 'TEMITOPE AWOSIKU',
+        number: '3157355320',
+        bank: 'FIRST BANK'
+      },
+      dollar: {
+        full: 'Account name: GOODNESS DUNSIN FOLAYAN\nAccount Number: 218095108511\nACH Routing Number: 101019644\nBank Name: LEAD BANK',
+        name: 'GOODNESS DUNSIN FOLAYAN',
+        number: '218095108511',
+        routing: '101019644',
+        bank: 'LEAD BANK'
+      }
+    };
+
+    function regCopyAcct(type = 'naira', btn) {
+      const text = ACCOUNT_DETAILS[type]?.full || ACCOUNT_DETAILS.naira.full;
+      copyText(text, btn);
+    }
+
+    function copyDetail(type = 'naira', field = 'name', btn) {
+      const text = ACCOUNT_DETAILS[type]?.[field] || '';
+      copyText(text, btn);
+    }
+
+    function copyText(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        if (btn) {
+          const original = btn.innerHTML;
+          btn.innerHTML = '✓';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.classList.remove('copied');
+          }, 1600);
+        }
+      }).catch(() => { alert(text); });
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('open'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+    document.querySelectorAll('.modal-overlay').forEach(o => {
+      o.addEventListener('click', e => { if (e.target === o) o.classList.remove('open'); });
+    });
+
+    const REGISTRY_URL = 'https://script.google.com/macros/s/AKfycbzj7OUPTaN22W1rQ2jHbRhY0KACBoO-RDA9rU0b57el-5kX08yiKxX4DlRy_3BgeR9ONQ/exec';
+    const NAIRA = n => '₦' + Number(n || 0).toLocaleString();
+    const kFmt = n => n >= 1000 ? '₦' + Math.round(n / 1000) + 'k' : NAIRA(n);
+    let REG_STATE = { items: [] };
+
+    async function loadRegistry() {
+      const grid = document.getElementById('regGrid');
+      try {
+        const res = await fetch(REGISTRY_URL + '?action=registry');
+        const data = await res.json();
+        if (data.status !== 'success') throw new Error('bad response');
+        REG_STATE = data;
+        renderSummary(data.summary);
+        renderGrid(data.items);
+      } catch (err) {
+        grid.innerHTML = '<div class="reg-loading">Registry is warming up — please refresh in a moment. 💛</div>';
+      }
+    }
+
+    function renderSummary(s) {
+      document.getElementById('sumCount').textContent = s.count;
+      document.getElementById('sumPledged').textContent = kFmt(s.totalPledged);
+      document.getElementById('sumBlessed').textContent = s.blessed;
+    }
+
+    function renderGrid(items) {
+      const grid = document.getElementById('regGrid');
+      if (!items.length) {
+        grid.innerHTML = '<div class="reg-loading">Registry coming soon 💛</div>';
+        return;
+      }
+      grid.innerHTML = items.map((it, i) => {
+        const pct = it.goal ? Math.min(100, Math.round(it.pledged / it.goal * 100)) : 0;
+        const done = it.goal && it.pledged >= it.goal;
+        return `
+          <div class="reg-card ${done ? 'done' : ''}">
+            <div class="reg-thumb">${it.emoji}${it.category ? `<span class="reg-tag">${it.category}</span>` : ''}</div>
+            <div class="reg-body">
+              <div class="reg-name">${it.item}</div>
+              <p class="reg-desc">${it.description || ''}</p>
+              <div class="reg-price"><span>Goal</span><span class="amt">${NAIRA(it.goal)}</span></div>
+              <div class="reg-bar"><div class="reg-fill" style="width:${pct}%"></div></div>
+              <div class="reg-prog"><span><b>${NAIRA(it.pledged)}</b> pledged</span><span>${pct}%</span></div>
+              ${done ? '<button class="reg-btn done">✓ Fully Blessed</button>' : `<button class="reg-btn" onclick="openPledge(${i})">💛 Contribute</button>`}
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    let CURRENT_ITEM = null;
+    function openPledge(i) {
+      const it = REG_STATE.items[i];
+      CURRENT_ITEM = it;
+      const remaining = Math.max(0, it.goal - it.pledged);
+      document.getElementById('plName').textContent = it.item;
+      document.getElementById('plRemaining').textContent = remaining > 0 ? `${NAIRA(remaining)} still needed toward ${NAIRA(it.goal)}` : 'Any amount is a blessing!';
+      document.getElementById('plGiver').value = '';
+      document.getElementById('plAmount').value = remaining || '';
+      document.getElementById('plConfirm').textContent = "💛 I've made my transfer";
+      document.getElementById('plConfirm').disabled = false;
+      openModal('pledgeModal');
+    }
+
+    async function submitPledge() {
+      const giver = document.getElementById('plGiver').value.trim();
+      const amount = Number(document.getElementById('plAmount').value);
+      const btn = document.getElementById('plConfirm');
+      if (!amount || amount < 500) { alert('Please enter an amount (min ₦500).'); return; }
+      btn.textContent = 'Recording…'; btn.disabled = true;
+      try {
+        const res = await fetch(REGISTRY_URL, {
+          method: 'POST',
+          body: JSON.stringify({
+            type: 'pledge',
+            item: CURRENT_ITEM.item,
+            name: giver || 'Anonymous',
+            amount: amount,
+            ref: '#MeetTheTemiduns'
+          })
+        });
+        const data = await res.json();
+        if (data.status === 'success') {
+          closeModal('pledgeModal');
+          openModal('thankYouModal');
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        btn.textContent = "💛 I've made my transfer"; btn.disabled = false;
+        alert('Could not record that — please try again or message us directly.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRegistry);
+  </script>
+</body>
+</html>

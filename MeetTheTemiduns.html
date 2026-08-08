@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>#MeetTheTemiduns — Temitope & Dunsin </title>
+<title>#MeetTheTemiduns — Goodness & Temitope</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --teal:    #B8767F;
-  --teal-dk: #8B5A63;
-  --teal-lt: #F5EBF0;
-  --gold:    #D4AF37;
+  --teal:    #1A7A6E;
+  --teal-dk: #0D5C52;
+  --teal-lt: #E8F5F3;
+  --gold:    #C8960C;
   --gold-lt: #F5E8C0;
-  --brown:   #3E2723;
-  --brown-lt:#E8DFD7;
+  --brown:   #7B4F2E;
+  --brown-lt:#F4EBE1;
   --peach:   #F2B89A;
   --peach-lt:#FDF3EE;
-  --turq:    #C9A877;
+  --turq:    #2CB8B0;
   --cream:   #FDF8F2;
   --dark:    #1C1C1C;
   --mid:     #4A4A4A;
@@ -52,7 +52,7 @@ nav {
 }
 nav.scrolled {
   background: rgba(253,248,242,.97);
-  box-shadow: 0 2px 20px rgba(184,118,127,.12);
+  box-shadow: 0 2px 20px rgba(26,122,110,.12);
   backdrop-filter: blur(8px);
 }
 .nav-brand {
@@ -112,15 +112,10 @@ nav.scrolled {
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    linear-gradient(160deg, rgba(253,248,242,.85) 0%, rgba(245,235,240,.55) 40%, rgba(253,243,238,.55) 70%, rgba(253,248,242,.85) 100%),
-    radial-gradient(ellipse at 20% 80%, rgba(184,118,127,.15) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 20%, rgba(212,175,55,.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(44,184,176,.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(200,150,12,.12) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(242,184,154,.1) 0%, transparent 60%),
-    url('images/IMG_5515.JPG');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  pointer-events: none;
+    linear-gradient(160deg, #FDF8F2 0%, #E8F5F3 40%, #FDF3EE 70%, #FDF8F2 100%);
 }
 .hero-floral {
   position:absolute; pointer-events:none;
@@ -173,7 +168,7 @@ nav.scrolled {
 }
 .countdown-unit {
   display:flex; flex-direction:column; align-items:center;
-  background:rgba(255,255,255,.7); border:1px solid rgba(212,175,55,.2);
+  background:rgba(255,255,255,.7); border:1px solid rgba(200,150,12,.2);
   border-radius:12px; padding:16px 22px; min-width:80px;
   backdrop-filter:blur(6px);
 }
@@ -222,13 +217,13 @@ section { padding: 100px 24px; }
   background:#fff; border-radius:16px;
   padding:36px 28px;
   border-top:3px solid var(--gold);
-  box-shadow:0 4px 24px rgba(62,39,35,.08);
+  box-shadow:0 4px 24px rgba(123,79,46,.08);
   transition: transform .3s, box-shadow .3s;
   opacity:0; transform:translateY(30px);
   transition: opacity .6s, transform .6s, box-shadow .3s;
 }
 .timeline-card.visible { opacity:1; transform:translateY(0); }
-.timeline-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(62,39,35,.14); }
+.timeline-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(123,79,46,.14); }
 .timeline-icon { font-size:2.2rem; margin-bottom:16px; }
 .timeline-date {
   font-size:.72rem; font-weight:600; letter-spacing:.18em;
@@ -239,17 +234,6 @@ section { padding: 100px 24px; }
   color:var(--teal-dk); margin-bottom:12px;
 }
 .timeline-text { font-size:.88rem; color:var(--mid); line-height:1.8; }
-.timeline-subcard {
-  padding: 20px 0 0;
-  border-top: 1px solid rgba(184,118,127,.12);
-  margin-top: 20px;
-}
-.timeline-subcard:first-child { margin-top: 0; border-top: none; padding-top: 0; }
-.timeline-subtitle {
-  font-family: var(--font-sans); font-size: .9rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  color: var(--teal-dk); margin-bottom: 14px;
-}
 
 /* ─── EVENTS ─────────────────────────────────────────────────────────────── */
 #events { background: var(--cream); }
@@ -260,7 +244,7 @@ section { padding: 100px 24px; }
 }
 .event-card {
   border-radius:20px; overflow:hidden;
-  box-shadow:0 6px 30px rgba(184,118,127,.1);
+  box-shadow:0 6px 30px rgba(26,122,110,.1);
   opacity:0; transform:translateY(30px);
   transition:opacity .6s, transform .6s;
 }
@@ -273,7 +257,7 @@ section { padding: 100px 24px; }
   background: linear-gradient(135deg, var(--teal), var(--teal-dk));
 }
 .event-card:nth-child(2) .event-card-header {
-  background: linear-gradient(135deg, var(--brown), #2C1F1B);
+  background: linear-gradient(135deg, var(--brown), #5A3820);
 }
 .event-type {
   font-size:.68rem; font-weight:600; letter-spacing:.2em;
@@ -305,13 +289,13 @@ section { padding: 100px 24px; }
 
 /* ─── RSVP ────────────────────────────────────────────────────────────────── */
 #rsvp {
-  background: linear-gradient(160deg, #6B505A 0%, #4A3640 100%);
+  background: linear-gradient(160deg, var(--teal-dk) 0%, #0A4840 100%);
   position:relative; overflow:hidden;
 }
 #rsvp::before {
   content:''; position:absolute; top:-100px; right:-100px;
   width:500px; height:500px; border-radius:50%;
-  background:rgba(184,118,127,.08);
+  background:rgba(44,184,176,.08);
 }
 #rsvp .section-label { color:var(--peach); }
 #rsvp .section-title { color:#fff; }
@@ -362,7 +346,7 @@ section { padding: 100px 24px; }
 }
 .btn-rsvp {
   width:100%; padding:16px;
-  background:linear-gradient(135deg, var(--gold), #B8860B);
+  background:linear-gradient(135deg, var(--gold), #A37A09);
   border:none; border-radius:12px; cursor:pointer;
   font-family:var(--font-sans); font-size:.9rem; font-weight:600;
   letter-spacing:.1em; text-transform:uppercase; color:#fff;
@@ -381,21 +365,6 @@ section { padding: 100px 24px; }
   font-size:1.15rem; color:var(--brown); max-width:600px; line-height:1.8;
   margin-top:8px;
 }
-.registry-link {
-  margin: 18px 0 24px;
-}
-.registry-link a {
-  display:inline-flex; align-items:center; gap:8px;
-  padding:12px 18px; border-radius:999px;
-  background:linear-gradient(135deg, var(--teal), var(--gold));
-  color:#fff; font-weight:600; text-decoration:none;
-  box-shadow:0 12px 24px rgba(184,118,127,.16);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.registry-link a:hover {
-  transform:translateY(-2px);
-  box-shadow:0 14px 28px rgba(184,118,127,.22);
-}
 .gift-cards {
   margin-top:52px;
   display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -404,13 +373,13 @@ section { padding: 100px 24px; }
 .gift-card {
   background:#fff; border-radius:20px; padding:36px 30px;
   border:2px solid transparent;
-  box-shadow:0 4px 24px rgba(62,39,35,.07);
+  box-shadow:0 4px 24px rgba(123,79,46,.07);
   transition:border .3s, transform .3s, box-shadow .3s;
   opacity:0; transform:translateY(30px);
   transition:opacity .6s, transform .6s, border .3s, box-shadow .3s;
 }
 .gift-card.visible { opacity:1; transform:translateY(0); }
-.gift-card:hover { border-color:var(--gold); transform:translateY(-5px); box-shadow:0 16px 40px rgba(62,39,35,.14); }
+.gift-card:hover { border-color:var(--gold); transform:translateY(-5px); box-shadow:0 16px 40px rgba(123,79,46,.14); }
 .gift-card-icon { font-size:2.4rem; margin-bottom:18px; }
 .gift-card-title { font-family:var(--font-serif); font-size:1.55rem; color:var(--teal-dk); margin-bottom:10px; }
 .gift-card-text { font-size:.85rem; color:var(--mid); line-height:1.8; margin-bottom:22px; }
@@ -433,7 +402,7 @@ section { padding: 100px 24px; }
 .wishlist-item {
   background:var(--cream); border-radius:12px; padding:14px 12px;
   text-align:center; cursor:pointer; transition:background .2s;
-  border:1px solid rgba(212,175,55,.15);
+  border:1px solid rgba(200,150,12,.15);
 }
 .wishlist-item:hover { background:var(--gold-lt); }
 .wishlist-item-icon { font-size:1.4rem; margin-bottom:5px; }
@@ -449,112 +418,27 @@ section { padding: 100px 24px; }
 }
 .btn-contribute:hover { background:var(--brown); color:#fff; }
 
-/* ===== REGISTRY ===== */
-.reg-summary{display:flex;gap:16px;justify-content:center;margin:34px 0 24px;flex-wrap:wrap}
-.reg-stat{background:#fff;border-radius:14px;padding:16px 30px;text-align:center;
-  box-shadow:0 4px 20px rgba(123,79,46,.08);border-top:3px solid var(--gold)}
-.reg-stat .n{font-family:var(--font-serif);font-size:1.9rem;font-weight:600;color:var(--teal)}
-.reg-stat .l{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-top:2px}
-
-.reg-account{max-width:640px;margin:0 auto 36px;background:var(--teal-lt);border-radius:12px;
-  padding:18px 20px;font-size:.9rem;color:var(--teal-dk)}
-.reg-account-title{font-family:var(--font-serif);font-size:1.2rem;color:var(--teal-dk);margin-bottom:10px}
-.reg-detail-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-.reg-detail-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;
-  border-radius:12px;background:rgba(255,255,255,.7);border:1px solid rgba(123,79,46,.08)}
-.reg-detail-label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dk);font-weight:600}
-.reg-detail-value{flex:1;color:var(--mid);word-break:break-word}
-.reg-detail-copy{background:var(--teal);color:#fff;border:none;border-radius:999px;width:34px;height:34px;
-  cursor:pointer;flex-shrink:0;font-size:.95rem}
-.reg-detail-copy.copied{background:var(--gold)}
-
-.reg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
-.reg-loading{grid-column:1/-1;text-align:center;color:var(--light);padding:40px;font-style:italic}
-.reg-card{background:#fff;border-radius:18px;overflow:hidden;border:2px solid transparent;
-  box-shadow:0 4px 24px rgba(123,79,46,.09);transition:.3s;display:flex;flex-direction:column}
-.reg-card:hover{border-color:var(--gold);transform:translateY(-4px)}
-.reg-thumb{height:130px;background:linear-gradient(135deg,var(--teal-lt),var(--gold-lt));
-  display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
-.reg-tag{position:absolute;top:12px;right:12px;font-size:.6rem;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.9);color:var(--brown)}
-.reg-card.done .reg-thumb::after{content:'BLESSED ✓';position:absolute;inset:0;
-  background:rgba(26,122,110,.82);color:#fff;display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-serif);font-size:1.5rem;letter-spacing:.08em}
-.reg-body{padding:20px;display:flex;flex-direction:column;flex:1}
-.reg-name{font-family:var(--font-serif);font-size:1.35rem;font-weight:600;color:var(--teal-dk)}
-.reg-desc{font-size:.8rem;color:var(--mid);line-height:1.6;margin:6px 0 14px;flex:1}
-.reg-price{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.reg-price .goal{font-size:.72rem;color:var(--light)}
-.reg-price .amt{font-family:var(--font-serif);font-size:1.4rem;font-weight:600;color:var(--brown)}
-.reg-bar{height:8px;background:var(--brown-lt);border-radius:10px;overflow:hidden;margin-bottom:6px}
-.reg-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--teal));border-radius:10px;transition:width .6s}
-.reg-prog{display:flex;justify-content:space-between;font-size:.72rem;color:var(--mid);margin-bottom:16px}
-.reg-prog b{color:var(--teal);font-weight:600}
-.reg-btn{padding:12px;border:none;border-radius:10px;background:linear-gradient(135deg,var(--gold),#A37A09);
-  color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.2s}
-.reg-btn:hover{opacity:.9}
-.reg-btn.done{background:var(--teal-lt);color:var(--teal);cursor:default}
-
-/* modal extras */
-.reg-modal{max-width:440px;text-align:left}
-.reg-modal .modal-title,.reg-modal .modal-icon{text-align:center;width:100%}
-.reg-remaining{text-align:center;color:var(--mid);font-size:.9rem;margin-bottom:18px}
-.reg-field{margin-bottom:14px}
-.reg-field label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px}
-.reg-field input{width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:10px;font-family:var(--font-sans);font-size:.95rem;outline:none}
-.reg-field input:focus{border-color:var(--gold)}
-.reg-acctbox{background:var(--teal-lt);border-radius:12px;padding:16px;font-size:.85rem;color:var(--teal-dk);line-height:1.8;margin:16px 0 10px}
-.reg-acctno{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem}
-.reg-acctno button{margin-left:auto}
-.reg-ref{font-size:.78rem;color:var(--brown)}
-.reg-steps{text-align:center;font-size:.78rem;color:var(--light);margin:10px 0 16px}
-.reg-privacy{text-align:center;font-size:.72rem;color:var(--light);margin-top:14px;line-height:1.5}
-
 /* ─── GALLERY ────────────────────────────────────────────────────────────── */
 #gallery { background:var(--cream); }
 .gallery-grid {
   margin-top:52px;
-  position: relative;
-  width: 100%;
-  height: 520px;
-  overflow: hidden;
-  border-radius: 24px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(3,200px);
+  gap:12px;
 }
-.gallery-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity .8s ease;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 0;
+.gallery-slot {
+  border-radius:14px; overflow:hidden;
+  background:linear-gradient(135deg, var(--teal-lt), var(--gold-lt));
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  cursor:pointer; transition:transform .3s, box-shadow .3s;
+  position:relative;
 }
-.gallery-slide.active { opacity: 1; pointer-events: auto; z-index: 2; }
-.gallery-dots {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 2;
-}
-.gallery-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(184,118,127,.45);
-  cursor: pointer;
-  transition: transform .2s, background .2s;
-}
-.gallery-dot.active {
-  background: var(--teal);
-  transform: scale(1.1);
-}
+.gallery-slot:nth-child(1) { grid-row:span 2; }
+.gallery-slot:nth-child(5) { grid-column:span 2; }
+.gallery-slot:hover { transform:scale(1.02); box-shadow:0 12px 32px rgba(26,122,110,.2); }
+.gallery-slot-icon { font-size:2rem; color:var(--teal); opacity:.6; }
+.gallery-slot-text { font-size:.75rem; color:var(--light); margin-top:8px; letter-spacing:.08em; }
 
 /* ─── TRAVEL ─────────────────────────────────────────────────────────────── */
 #travel { background:var(--teal-lt); }
@@ -565,7 +449,7 @@ section { padding: 100px 24px; }
 }
 .travel-card {
   background:#fff; border-radius:16px; padding:30px 26px;
-  box-shadow:0 4px 20px rgba(184,118,127,.08);
+  box-shadow:0 4px 20px rgba(26,122,110,.08);
   opacity:0; transform:translateY(20px);
   transition:opacity .6s, transform .6s;
 }
@@ -588,7 +472,7 @@ section { padding: 100px 24px; }
   margin-top:40px; border-radius:18px; overflow:hidden;
   height:280px; background:var(--brown-lt);
   display:flex; align-items:center; justify-content:center;
-  border:2px dashed rgba(62,39,35,.3);
+  border:2px dashed rgba(123,79,46,.3);
 }
 .map-placeholder { text-align:center; color:var(--light); font-size:.85rem; }
 .map-placeholder p { margin-top:10px; }
@@ -648,7 +532,7 @@ footer {
 .footer-divider {
   margin: 0 auto 32px;
   width:200px; height:1px;
-  background:linear-gradient(90deg,transparent,rgba(212,175,55,.6),transparent);
+  background:linear-gradient(90deg,transparent,rgba(200,150,12,.6),transparent);
 }
 
 /* ─── MODALS ─────────────────────────────────────────────────────────────── */
@@ -690,7 +574,7 @@ footer {
   position:fixed; bottom:24px; right:24px; z-index:900;
   background:var(--teal); color:#fff; border-radius:30px;
   padding:10px 18px; font-size:.75rem; font-weight:600;
-  letter-spacing:.08em; box-shadow:0 4px 20px rgba(184,118,127,.3);
+  letter-spacing:.08em; box-shadow:0 4px 20px rgba(26,122,110,.3);
   cursor:pointer; display:none;
 }
 
@@ -716,6 +600,64 @@ footer {
   .modal { padding:32px 24px; }
   .wishlist-grid { grid-template-columns:1fr 1fr; }
 }
+
+/* ===== REGISTRY ===== */
+/* ===== REGISTRY STYLES — paste inside your <style> block ===== */
+.reg-summary{display:flex;gap:16px;justify-content:center;margin:34px 0 24px;flex-wrap:wrap}
+.reg-stat{background:#fff;border-radius:14px;padding:16px 30px;text-align:center;
+  box-shadow:0 4px 20px rgba(123,79,46,.08);border-top:3px solid var(--gold)}
+.reg-stat .n{font-family:var(--font-serif);font-size:1.9rem;font-weight:600;color:var(--teal)}
+.reg-stat .l{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-top:2px}
+
+.reg-account{max-width:640px;margin:0 auto 36px;background:var(--teal-lt);border-radius:12px;
+  padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  font-size:.9rem;color:var(--teal-dk);flex-wrap:wrap}
+.reg-copy,.reg-acctno button{background:var(--teal);color:#fff;border:none;border-radius:20px;
+  padding:7px 18px;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.reg-copy.copied{background:var(--gold)}
+
+.reg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.reg-loading{grid-column:1/-1;text-align:center;color:var(--light);padding:40px;font-style:italic}
+.reg-card{background:#fff;border-radius:18px;overflow:hidden;border:2px solid transparent;
+  box-shadow:0 4px 24px rgba(123,79,46,.09);transition:.3s;display:flex;flex-direction:column}
+.reg-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.reg-thumb{height:130px;background:linear-gradient(135deg,var(--teal-lt),var(--gold-lt));
+  display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
+.reg-tag{position:absolute;top:12px;right:12px;font-size:.6rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;padding:5px 12px;border-radius:20px;background:rgba(255,255,255,.9);color:var(--brown)}
+.reg-card.done .reg-thumb::after{content:'BLESSED ✓';position:absolute;inset:0;
+  background:rgba(26,122,110,.82);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-serif);font-size:1.5rem;letter-spacing:.08em}
+.reg-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.reg-name{font-family:var(--font-serif);font-size:1.35rem;font-weight:600;color:var(--teal-dk)}
+.reg-desc{font-size:.8rem;color:var(--mid);line-height:1.6;margin:6px 0 14px;flex:1}
+.reg-price{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.reg-price .goal{font-size:.72rem;color:var(--light)}
+.reg-price .amt{font-family:var(--font-serif);font-size:1.4rem;font-weight:600;color:var(--brown)}
+.reg-bar{height:8px;background:var(--brown-lt);border-radius:10px;overflow:hidden;margin-bottom:6px}
+.reg-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--teal));border-radius:10px;transition:width .6s}
+.reg-prog{display:flex;justify-content:space-between;font-size:.72rem;color:var(--mid);margin-bottom:16px}
+.reg-prog b{color:var(--teal);font-weight:600}
+.reg-btn{padding:12px;border:none;border-radius:10px;background:linear-gradient(135deg,var(--gold),#A37A09);
+  color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.reg-btn:hover{opacity:.9}
+.reg-btn.done{background:var(--teal-lt);color:var(--teal);cursor:default}
+
+/* modal extras */
+.reg-modal{max-width:440px;text-align:left}
+.reg-modal .modal-title,.reg-modal .modal-icon{text-align:center;width:100%}
+.reg-remaining{text-align:center;color:var(--mid);font-size:.9rem;margin-bottom:18px}
+.reg-field{margin-bottom:14px}
+.reg-field label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:6px}
+.reg-field input{width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:10px;font-family:var(--font-sans);font-size:.95rem;outline:none}
+.reg-field input:focus{border-color:var(--gold)}
+.reg-acctbox{background:var(--teal-lt);border-radius:12px;padding:16px;font-size:.85rem;color:var(--teal-dk);line-height:1.8;margin:16px 0 10px}
+.reg-acctno{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem}
+.reg-acctno button{margin-left:auto}
+.reg-ref{font-size:.78rem;color:var(--brown)}
+.reg-steps{text-align:center;font-size:.78rem;color:var(--light);margin:10px 0 16px}
+.reg-privacy{text-align:center;font-size:.72rem;color:var(--light);margin-top:14px;line-height:1.5}
+
 </style>
 </head>
 <body>
@@ -749,13 +691,12 @@ footer {
 
 <!-- ── NAV ─────────────────────────────────────────────────────────────────── -->
 <nav id="navbar">
-  <a href="#hero" class="nav-brand">T & D</a>
+  <a href="#hero" class="nav-brand">G & T</a>
   <ul class="nav-links">
     <li><a href="#story">Our Story</a></li>
     <li><a href="#events">Events</a></li>
     <li><a href="#rsvp">RSVP</a></li>
     <li><a href="#gifts">Gifts</a></li>
-    <li><a href="registry.html">Registry</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#travel">Travel</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -770,7 +711,6 @@ footer {
   <a href="#events" class="mobile-link">Events</a>
   <a href="#rsvp" class="mobile-link">RSVP</a>
   <a href="#gifts" class="mobile-link">Gifts</a>
-  <a href="registry.html" class="mobile-link">Registry</a>
   <a href="#gallery" class="mobile-link">Gallery</a>
   <a href="#travel" class="mobile-link">Travel</a>
   <a href="#faq" class="mobile-link">FAQ</a>
@@ -784,12 +724,12 @@ footer {
   <div class="hero-content">
     <div class="hero-tag">#MeetTheTemiduns</div>
     <h1 class="hero-names">
-      Temitope
+      Goodness
       <span class="hero-amp">&amp;</span>
-      <em>Dunsin</em>
+      <em>Temitope</em>
     </h1>
     <div class="divider-flourish"></div>
-    <p class="hero-date">November 20, 2026 &nbsp;·&nbsp; Ondo Town, Nigeria</p>
+    <p class="hero-date">November 21, 2026 &nbsp;·&nbsp; Ondo Town, Nigeria</p>
     <p class="hero-hashtag">We're getting married!</p>
     <div style="height:36px"></div>
     <div class="countdown" id="countdown">
@@ -814,40 +754,28 @@ footer {
     <div class="timeline">
       <div class="timeline-card reveal">
         <div class="timeline-icon">🌟</div>
-        <div class="timeline-date">February — A Thursday</div>
+        <div class="timeline-date">[DATE WE MET]</div>
         <div class="timeline-title">How We Met</div>
-        <div class="timeline-subcard">
-          <div class="timeline-subtitle">His POV</div>
-          <p class="timeline-text">I got her number from her sister that fateful day. She posted her picture for her birthday on WhatsApp status.</p>
-          <p class="timeline-text">Something in me said — call, don't text. So I did.</p>
-          <p class="timeline-text">She picked up. I said, &ldquo;Hello, this is Goodness.&rdquo;</p>
-          <p class="timeline-text">We talked. Just like that. I remember thinking — this is easy. Not in a careless way. In a rare way. The kind of easy that you don't manufacture. Those kairos moments you don't plan for.</p>
-          <p class="timeline-text">I called the next day. Not because I had a plan. Just because I wanted to.</p>
-          <p class="timeline-text">Those calls became our thing. Even when everyone was in bed, we'd just talk. Work dramas, random thoughts, aspirations. I was learning her without even trying. And somewhere in those midnight conversations, without making any announcements about it, I knew she was going to be important to me.</p>
-          <p class="timeline-text">When we finally met in person it confirmed what I already felt. She was exactly herself. No performance. Just her. And that peace — that's the thing I can't fully explain. Being around her just settles something in me.</p>
-          <p class="timeline-text">There were beautiful seasons. There were hard ones too. But God kept showing up in the middle of all of it, threading things together in ways none of us could have scripted.</p>
-          <p class="timeline-text">When it was time, I said it plainly. No games. No hints. Just this is who I am, this is what I want, and I want it with you.</p>
-          <p class="timeline-text">She said yes. And honestly, everything since has just felt like grace.</p>
-          <p class="timeline-text">From a birthday call I almost didn't make to a lifetime I can't imagine any other way.</p>
-          <p class="timeline-text">God can be trusted to finish what he starts.</p>
-        </div>
-        <div class="timeline-subcard">
-          <div class="timeline-subtitle">Her POV</div>
-          <p class="timeline-text">It’s a special Thursday evening, sometime in February, which was my birthday. I was receiving calls from family and friends, with gifts. Then my phone rings and a deep voice says &ldquo;Hello, this is Goodness.&rdquo; And I was thinking &ldquo;Goodness? That’s a name, not a greeting 😂&rdquo;</p>
-          <p class="timeline-text">But then we talk. And talk. About random things, real things, dreams. No awkward silences, just… ease. The next day he calls again. Then again. Those short “birthday check-ins” turned into our daily 12am conversations. Months of just getting to know each other’s hearts before he ever asked me out.</p>
-          <p class="timeline-text">Later on, our online conversations led to us meeting physically now and then through our busy schedules, and it’s been wonderful.</p>
-          <p class="timeline-text">Then he finally said his intentions straight, no games. Just honest and safe at the same time.</p>
-          <p class="timeline-text">There were sweet moments. There were ups and downs. But through it all, God kept weaving us together.</p>
-          <p class="timeline-text">A year later, heart pounding as he proposed. From “this is Goodness” to “will you marry me” — and I gave a sweet “yes”.</p>
-          <p class="timeline-text">Now by His grace, we’re becoming one in the love. A love that starts with a birthday call and ends at the altar… God is really wonderful.</p>
-        </div>
+        <p class="timeline-text">[Tell the story of how you and Temitope first crossed paths. Was it at church, work, or through a mutual friend? Share that first impression here.]</p>
       </div>
       <div class="timeline-card reveal">
-          <div class="timeline-icon">🥂</div>
-          <div class="timeline-date">November 20, 2026</div>
-          <div class="timeline-title">The Wedding (Both Ceremonies)</div>
-          <p class="timeline-text">And now, surrounded by everyone we love, we begin forever. Ondo Town, Nigeria — November 20, 2026. Both the Traditional (8:00 AM) and White ceremonies will take place on this day. We can't wait to celebrate with you.</p>
-        </div>
+        <div class="timeline-icon">☕</div>
+        <div class="timeline-date">[FIRST DATE]</div>
+        <div class="timeline-title">The First Date</div>
+        <p class="timeline-text">[Describe your first date — where you went, what you talked about, and the moment you knew this person was something special.]</p>
+      </div>
+      <div class="timeline-card reveal">
+        <div class="timeline-icon">💍</div>
+        <div class="timeline-date">[PROPOSAL DATE]</div>
+        <div class="timeline-title">The Proposal</div>
+        <p class="timeline-text">[Tell the proposal story! Where were you? How did it happen? What did Temitope say when you got down on one knee?]</p>
+      </div>
+      <div class="timeline-card reveal">
+        <div class="timeline-icon">🥂</div>
+        <div class="timeline-date">November 21, 2026</div>
+        <div class="timeline-title">The Wedding</div>
+        <p class="timeline-text">And now, surrounded by everyone we love, we begin forever. Ondo Town, Nigeria — November 2026. We can't wait to celebrate with you.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -857,33 +785,8 @@ footer {
   <div class="section-inner">
     <div class="section-label">Save the dates</div>
     <h2 class="section-title">The <em>Celebrations</em></h2>
-    <p class="section-sub">Two beautiful ceremonies on November 20, 2026 — Traditional (8:00 AM) and White (time TBC). We'd love for you to join us at both.</p>
+    <p class="section-sub">Two beautiful ceremonies, one unforgettable union. We'd love for you to join us at both.</p>
     <div class="event-cards">
-      <div class="event-card reveal">
-        <div class="event-card-header">
-          <div class="event-type">Day One</div>
-          <div class="event-name">White<br>Wedding</div>
-        </div>
-        <div class="event-card-body">
-          <div class="event-detail">
-            <span class="event-detail-icon">📅</span>
-            <div class="event-detail-text"><strong>November 20, 2026</strong>White Wedding</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">⏰</span>
-            <div class="event-detail-text"><strong>11:00 AM</strong>White Wedding Ceremony</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">⛪</span>
-            <div class="event-detail-text"><strong>Our Lady of Lourdes Catholic Church</strong>Akinjagunla, Ondo City</div>
-          </div>
-          <div class="event-detail">
-            <span class="event-detail-icon">👗</span>
-            <div class="event-detail-text"><strong>Dress Code</strong>Formal / Semi-formal</div>
-          </div>
-          <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261120')">+ Add to Calendar</button>
-        </div>
-      </div>
       <div class="event-card reveal">
         <div class="event-card-header">
           <div class="event-type">Day One</div>
@@ -892,21 +795,46 @@ footer {
         <div class="event-card-body">
           <div class="event-detail">
             <span class="event-detail-icon">📅</span>
-            <div class="event-detail-text"><strong>November 20, 2026</strong>Traditional Wedding</div>
+            <div class="event-detail-text"><strong>[TRADITIONAL DATE]</strong>November 2026</div>
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">⏰</span>
-            <div class="event-detail-text"><strong>8:00 AM</strong>Start time</div>
+            <div class="event-detail-text"><strong>[TIME]</strong>Time to be confirmed</div>
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">📍</span>
-            <div class="event-detail-text"><strong>Labim Hotel</strong>Ondo Town, Nigeria</div>
+            <div class="event-detail-text"><strong>[VENUE NAME]</strong>[VENUE ADDRESS], Ondo Town, Nigeria</div>
           </div>
           <div class="event-detail">
             <span class="event-detail-icon">👗</span>
             <div class="event-detail-text"><strong>Dress Code</strong>Aso-Ebi / Traditional Attire</div>
           </div>
-          <button class="btn-cal" onclick="downloadICS('Traditional Wedding','20261120')">+ Add to Calendar</button>
+          <button class="btn-cal" onclick="downloadICS('Traditional Wedding','[TRADITIONAL DATE]')">+ Add to Calendar</button>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-type">Day Two</div>
+          <div class="event-name">White<br>Wedding</div>
+        </div>
+        <div class="event-card-body">
+          <div class="event-detail">
+            <span class="event-detail-icon">📅</span>
+            <div class="event-detail-text"><strong>November 21, 2026</strong>White Wedding</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">⏰</span>
+            <div class="event-detail-text"><strong>[TIME]</strong>Time to be confirmed</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">⛪</span>
+            <div class="event-detail-text"><strong>[CHURCH NAME]</strong>[CHURCH ADDRESS], Ondo Town, Nigeria</div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon">👗</span>
+            <div class="event-detail-text"><strong>Dress Code</strong>Formal / Semi-formal</div>
+          </div>
+          <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261121')">+ Add to Calendar</button>
         </div>
       </div>
     </div>
@@ -922,31 +850,49 @@ footer {
     <div id="rsvpWrapper">
       <form class="rsvp-form" id="rsvpForm" novalidate>
         <div class="form-row">
-          <div class="form-group" id="fg-firstname">
-            <label>First Name *</label>
-            <input type="text" id="rsvp-firstname" placeholder="First name">
-            <span class="form-error">Please enter your first name</span>
+          <div class="form-group" id="fg-name">
+            <label>Full Name *</label>
+            <input type="text" id="rsvp-name" placeholder="Your full name">
+            <span class="form-error">Please enter your name</span>
           </div>
-          <div class="form-group" id="fg-lastname">
-            <label>Last Name *</label>
-            <input type="text" id="rsvp-lastname" placeholder="Last name">
-            <span class="form-error">Please enter your last name</span>
+          <div class="form-group" id="fg-email">
+            <label>Email Address *</label>
+            <input type="email" id="rsvp-email" placeholder="your@email.com">
+            <span class="form-error">Please enter a valid email</span>
           </div>
         </div>
         <div class="form-row">
-          <div class="form-group" id="fg-email">
-            <label>Email Address (optional)</label>
-            <input type="email" id="rsvp-email" placeholder="you@example.com">
-            <span class="form-error">Please enter a valid email if provided</span>
-          </div>
           <div class="form-group">
             <label>Phone Number</label>
             <input type="tel" id="rsvp-phone" placeholder="+234 ...">
           </div>
+          <div class="form-group">
+            <label>Number of Guests</label>
+            <select id="rsvp-guests">
+              <option value="1">1 (just me)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" id="fg-events">
+          <label>Which event(s) will you attend? *</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="events" value="traditional"> Traditional Wedding</label>
+            <label class="checkbox-label"><input type="checkbox" name="events" value="white"> White Wedding</label>
+            <label class="checkbox-label"><input type="checkbox" name="events" value="both"> Both 🎉</label>
+          </div>
+          <span class="form-error" id="events-error">Please select at least one event</span>
+        </div>
+        <div class="form-group">
+          <label>Dietary Requirements / Allergies</label>
+          <textarea id="rsvp-diet" placeholder="Any dietary restrictions or allergies we should know about?"></textarea>
         </div>
         <div class="form-group">
           <label>Message to the Couple</label>
-          <textarea id="rsvp-msg" placeholder="Share a note, congratulations, or anything you'd like us to know."></textarea>
+          <textarea id="rsvp-msg" placeholder="Share your well wishes, a fond memory, or just say hello! 💛"></textarea>
         </div>
         <button type="submit" class="btn-rsvp">Confirm My Attendance ✨</button>
       </form>
@@ -960,67 +906,43 @@ footer {
     <div class="section-label">Gift registry</div>
     <h2 class="section-title">Bless <em>Our Home</em></h2>
     <p class="gift-intro">"Your presence is our greatest gift. But if you'd like to bless our new home, here are a few things we're dreaming of. Every contribution — whole or part — means the world to us."</p>
-    <div class="registry-link">
-      <a href="registry.html">Open our full registry experience ✨</a>
+
+    <!-- summary -->
+    <div class="reg-summary" id="regSummary">
+      <div class="reg-stat"><div class="n" id="sumCount">—</div><div class="l">Gifts</div></div>
+      <div class="reg-stat"><div class="n" id="sumPledged">—</div><div class="l">Pledged</div></div>
+      <div class="reg-stat"><div class="n" id="sumBlessed">—</div><div class="l">Fully Blessed</div></div>
     </div>
 
     <!-- account (always shown, since honour-system) -->
     <div class="reg-account">
-      <div class="reg-account-title">Naira Payments</div>
-      <div class="reg-detail-list">
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Account name</div>
-          <div class="reg-detail-value">TEMITOPE AWOSIKU</div>
-          <button class="reg-detail-copy" onclick="copyDetail('naira', 'name', this)" aria-label="Copy account name">📋</button>
-        </div>
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Account number</div>
-          <div class="reg-detail-value">3157355320</div>
-          <button class="reg-detail-copy" onclick="copyDetail('naira', 'number', this)" aria-label="Copy account number">📋</button>
-        </div>
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Bank name</div>
-          <div class="reg-detail-value">FIRST BANK</div>
-          <button class="reg-detail-copy" onclick="copyDetail('naira', 'bank', this)" aria-label="Copy bank name">📋</button>
-        </div>
-      </div>
-    </div>
-    <div class="reg-account">
-      <div class="reg-account-title">Dollar Payments</div>
-      <div class="reg-detail-list">
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Account name</div>
-          <div class="reg-detail-value">GOODNESS DUNSIN FOLAYAN</div>
-          <button class="reg-detail-copy" onclick="copyDetail('dollar', 'name', this)" aria-label="Copy account name">📋</button>
-        </div>
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Account number</div>
-          <div class="reg-detail-value">218095108511</div>
-          <button class="reg-detail-copy" onclick="copyDetail('dollar', 'number', this)" aria-label="Copy account number">📋</button>
-        </div>
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Routing number</div>
-          <div class="reg-detail-value">101019644</div>
-          <button class="reg-detail-copy" onclick="copyDetail('dollar', 'routing', this)" aria-label="Copy routing number">📋</button>
-        </div>
-        <div class="reg-detail-row">
-          <div class="reg-detail-label">Bank name</div>
-          <div class="reg-detail-value">LEAD BANK</div>
-          <button class="reg-detail-copy" onclick="copyDetail('dollar', 'bank', this)" aria-label="Copy bank name">📋</button>
-        </div>
-      </div>
+      <span>🏦 <strong>GTBank</strong> · Goodness &amp; Temitope Temidun · <strong id="acctNo">[BANK ACCOUNT NUMBER]</strong></span>
+      <button class="reg-copy" onclick="regCopyAcct()">Copy</button>
     </div>
 
+    <!-- grid populated by JS -->
+    <div class="reg-grid" id="regGrid">
+      <div class="reg-loading">Loading the registry…</div>
+    </div>
   </div>
 </section>
 
-<!-- ── GALLERY ────────────────────────────────────────────────────────────── -->
 <section id="gallery">
   <div class="section-inner">
     <div class="section-label">Our moments</div>
     <h2 class="section-title">Our <em>Gallery</em></h2>
     <p class="section-sub">Photos from our journey together. More to come as we approach the big day!</p>
-    <div class="gallery-grid" id="gallerySlider"></div>
+    <div class="gallery-grid">
+      <div class="gallery-slot" onclick="openLightbox(0)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(1)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(2)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(3)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(4)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(5)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(6)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(7)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+      <div class="gallery-slot" onclick="openLightbox(8)"><span class="gallery-slot-icon">📷</span><span class="gallery-slot-text">Photo coming soon</span></div>
+    </div>
   </div>
 </section>
 
@@ -1045,29 +967,34 @@ footer {
       </div>
       <div class="travel-card reveal">
         <div class="travel-card-icon">🏨</div>
-        <div class="travel-card-title">Esporta Suites Hotel & Resorts</div>
-        <p class="travel-card-text">One of Ondo Town's best-rated hotels — pool, restaurant & bar with live band evenings, DSTV, free parking and 24hr security. Rooms range from Standard to Royal Suite.</p>
-        <div class="travel-card-sub">₦45,000–₦105,000 / night · ~10 min from venue</div>
-        <a class="btn-book" href="https://hotels.ng/hotel/45634-esporta-suites-hotel-resorts-ondo">Book Now</a>
+        <div class="travel-card-title">[HOTEL 1 NAME]</div>
+        <p class="travel-card-text">[Brief description of Hotel 1. Distance from venue, amenities, price range.]</p>
+        <div class="travel-card-sub">₦[PRICE RANGE] / night · [DISTANCE] from venue</div>
+        <a class="btn-book" href="#">Book Now</a>
       </div>
       <div class="travel-card reveal">
         <div class="travel-card-icon">🏨</div>
-        <div class="travel-card-title">Polak Hotels</div>
-        <p class="travel-card-text">A long-established hotel in the heart of Ondo Town with Deluxe rooms, Jacuzzi Super Deluxe rooms and Luxury Suites, plus a restaurant, gym, roof garden and airport shuttle on request.</p>
-        <div class="travel-card-sub">From ₦20,000 / night · ~5 min from venue</div>
-        <a class="btn-book" href="tel:+2349069364017">Call to Book</a>
+        <div class="travel-card-title">[HOTEL 2 NAME]</div>
+        <p class="travel-card-text">[Brief description of Hotel 2. Distance from venue, amenities, price range.]</p>
+        <div class="travel-card-sub">₦[PRICE RANGE] / night · [DISTANCE] from venue</div>
+        <a class="btn-book" href="#">Book Now</a>
       </div>
       <div class="travel-card reveal">
         <div class="travel-card-icon">🏨</div>
-        <div class="travel-card-title">Citywalk Hotel</div>
-        <p class="travel-card-text">A modern hotel on Brigadier Ademulegun Road with an executive bar/restaurant, laundry service, 24-hour power supply and secure parking.</p>
-        <div class="travel-card-sub">Contact hotel for rates · ~5 min from venue</div>
-        <a class="btn-book" href="tel:+2347053273700">Call to Book</a>
+        <div class="travel-card-title">[HOTEL 3 NAME]</div>
+        <p class="travel-card-text">[Brief description of Hotel 3. Distance from venue, amenities, price range.]</p>
+        <div class="travel-card-sub">₦[PRICE RANGE] / night · [DISTANCE] from venue</div>
+        <a class="btn-book" href="#">Book Now</a>
       </div>
     </div>
-    <p style="font-size:.8rem;color:var(--light);margin-top:16px;text-align:center">Rates as of August 2026 and subject to change — please confirm directly with each hotel before booking.</p>
     <div class="map-wrap">
-      <iframe src="https://www.google.com/maps?q=Labim+Hotel+and+Event+Centre,+Km+2+Akure+Road,+Ondo,+Nigeria&output=embed" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Replace the src with your actual Google Maps embed URL -->
+      <!-- <iframe src="[GOOGLE MAPS EMBED URL]" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe> -->
+      <div class="map-placeholder">
+        <div style="font-size:2rem">🗺️</div>
+        <p>Replace with Google Maps embed</p>
+        <p style="font-size:.75rem;margin-top:6px;color:var(--light)">[GOOGLE MAPS EMBED URL] — paste inside the iframe src above</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1108,7 +1035,7 @@ footer {
 
 <!-- ── FOOTER ──────────────────────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-names">Temitope & Dunsin</div>
+  <div class="footer-names">Goodness & Temitope</div>
   <div class="footer-hash">#MeetTheTemiduns</div>
   <div class="footer-divider"></div>
   <div class="footer-social">
@@ -1116,7 +1043,7 @@ footer {
     <a href="https://twitter.com/[INSTAGRAM HANDLE]" target="_blank" class="social-btn" title="Twitter / X">𝕏</a>
     <a href="[WHATSAPP GROUP LINK]" target="_blank" class="social-btn" title="WhatsApp">💬</a>
   </div>
-  <p class="footer-copy">Made with 💛 for Temitope & Dunsin · November 20, 2026 · Ondo Town, Nigeria</p>
+  <p class="footer-copy">Made with 💛 for Goodness & Temitope · November 21, 2026 · Ondo Town, Nigeria</p>
 </footer>
 
 <!-- ── RSVP BADGE ─────────────────────────────────────────────────────────── -->
@@ -1124,6 +1051,38 @@ footer {
 
 <!-- ── MODALS ──────────────────────────────────────────────────────────────── -->
 <!-- Thank You Modal -->
+<!-- Pledge modal -->
+
+<div class="modal-overlay" id="pledgeModal">
+  <div class="modal reg-modal">
+    <button class="modal-close" onclick="closeModal('pledgeModal')">✕</button>
+    <div class="modal-icon" id="plEmoji">🎁</div>
+    <div class="modal-title" id="plName">Item</div>
+    <p class="reg-remaining" id="plRemaining"></p>
+
+    <div class="reg-field">
+      <label>Your Name</label>
+      <input type="text" id="plGiver" placeholder="So we can thank you personally">
+    </div>
+    <div class="reg-field">
+      <label>Amount to give (₦)</label>
+      <input type="number" id="plAmount" placeholder="e.g. 20000" min="500">
+    </div>
+
+    <div class="reg-acctbox">
+      <div>🏦 <strong>GTBank</strong></div>
+      <div>Goodness &amp; Temitope Temidun</div>
+      <div class="reg-acctno"><span id="plAcct">[BANK ACCOUNT NUMBER]</span>
+        <button onclick="regCopyAcct()">Copy</button></div>
+      <div class="reg-ref">Reference: <strong>#MeetTheTemiduns</strong></div>
+    </div>
+    <p class="reg-steps">1. Transfer to the account above &nbsp;→&nbsp; 2. Tap the button so we can match your gift</p>
+
+    <button class="btn-rsvp" id="plConfirm" onclick="submitPledge()">💛 I've made my transfer</button>
+    <p class="reg-privacy">🔒 Your gift is private — the item only updates once we’ve confirmed your transfer — so nothing here can be faked.</p>
+  </div>
+</div>
+
 <div class="modal-overlay" id="thankYouModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('thankYouModal')">✕</button>
@@ -1145,220 +1104,27 @@ footer {
   </div>
 </div>
 
-<!-- Pledge Modal -->
-<div class="modal-overlay" id="pledgeModal">
-  <div class="modal reg-modal">
-    <button class="modal-close" onclick="closeModal('pledgeModal')">✕</button>
-    <div class="modal-icon" id="plEmoji">🎁</div>
-    <div class="modal-title" id="plName">Item</div>
-    <p class="reg-remaining" id="plRemaining"></p>
-
-    <div class="reg-field">
-      <label>Your Name</label>
-      <input type="text" id="plGiver" placeholder="So we can thank you personally">
+<!-- Wishlist Modal -->
+<div class="modal-overlay" id="wishlistModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('wishlistModal')">✕</button>
+    <div class="modal-icon">🎁</div>
+    <div class="modal-title" id="wishlist-modal-title">Item Name</div>
+    <p class="modal-text" id="wishlist-modal-desc">Description</p>
+    <p style="font-family:var(--font-serif);font-size:1.3rem;color:var(--gold);margin:12px 0" id="wishlist-modal-price">₦0</p>
+    <div class="gift-account" style="text-align:left;margin-top:16px">
+      <strong>Bank:</strong> GTBank<br>
+      <strong>Account:</strong> [BANK ACCOUNT NUMBER]<br>
+      <strong>Name:</strong> Goodness & Temitope Temidun<br>
+      <strong>Reference:</strong> #MeetTheTemiduns Gift
     </div>
-    <div class="reg-field">
-      <label>Amount to give (₦)</label>
-      <input type="number" id="plAmount" placeholder="e.g. 20000" min="500">
-    </div>
-
-    <div class="reg-acctbox">
-      <div>🏦 <strong>FIRST BANK</strong></div>
-      <div>TEMITOPE AWOSIKU</div>
-      <div class="reg-acctno"><span id="plAcct">3157355320</span>
-        <button onclick="regCopyAcct('naira', this)">Copy</button></div>
-      <div class="reg-ref">Reference: <strong>#MeetTheTemiduns</strong></div>
-    </div>
-    <p class="reg-steps">1. Transfer to the account above &nbsp;→&nbsp; 2. Tap the button so we can match your gift</p>
-
-    <button class="btn-rsvp" id="plConfirm" onclick="submitPledge()">💛 I've made my transfer</button>
-    <p class="reg-privacy">🔒 Your gift is private — the item only updates once we’ve confirmed your transfer — so nothing here can be faked.</p>
+    <button class="btn-copy" style="margin-top:12px;width:100%;justify-content:center" onclick="copyAccount();closeModal('wishlistModal')">📋 Copy Account No.</button>
   </div>
 </div>
 
 <script>
-// ── COUNTDOWN ────────────────────────────────────────────────────────────────
-(function countdown() {
-  const target = new Date('2026-11-20T10:00:00');
-  function tick() {
-    const now = new Date();
-    const diff = target - now;
-    if (diff <= 0) { document.getElementById('countdown').innerHTML = '<div class="countdown-unit"><span class="countdown-num">🎊</span><span class="countdown-label">We\'re Married!</span></div>'; return; }
-    const d = Math.floor(diff/864e5);
-    const h = Math.floor((diff%864e5)/36e5);
-    const m = Math.floor((diff%36e5)/6e4);
-    const s = Math.floor((diff%6e4)/1e3);
-    document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
-    document.getElementById('cd-hrs').textContent  = String(h).padStart(2,'0');
-    document.getElementById('cd-min').textContent  = String(m).padStart(2,'0');
-    document.getElementById('cd-sec').textContent  = String(s).padStart(2,'0');
-  }
-  tick(); setInterval(tick,1000);
-})();
-
-// ── NAV ──────────────────────────────────────────────────────────────────────
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-});
-const ham = document.getElementById('hamburger');
-const menu = document.getElementById('mobileMenu');
-ham.addEventListener('click', () => {
-  ham.classList.toggle('open');
-  menu.classList.toggle('open');
-});
-document.querySelectorAll('.mobile-link').forEach(a => {
-  a.addEventListener('click', () => { ham.classList.remove('open'); menu.classList.remove('open'); });
-});
-
-// ── SCROLL REVEAL ─────────────────────────────────────────────────────────────
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e,i) => {
-    if(e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i*120);
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold:0.12 });
-document.querySelectorAll('.reveal, .timeline-card, .event-card, .gift-card, .travel-card, .faq-item').forEach(el => observer.observe(el));
-
-// ── FAQ ACCORDION ─────────────────────────────────────────────────────────────
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if(!wasOpen) item.classList.add('open');
-  });
-});
-
-// ── RSVP ─────────────────────────────────────────────────────────────────────
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx8mtEDrT_TA6x4Zi4E-HWJ6ZSm8ksdcGXmT9S-JqarL6bj05Bgxhhz1qBnWHkyGScB/exec';
-
-document.getElementById('rsvpForm')?.addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  // Validation
-  let valid = true;
-  const firstname  = document.getElementById('rsvp-firstname');
-  const lastname   = document.getElementById('rsvp-lastname');
-  const email      = document.getElementById('rsvp-email');
-  const fg_firstname  = document.getElementById('fg-firstname');
-  const fg_lastname   = document.getElementById('fg-lastname');
-  const fg_email      = document.getElementById('fg-email');
-
-  fg_firstname.classList.toggle('has-error', !firstname.value.trim());
-  if (!firstname.value.trim()) valid = false;
-  fg_lastname.classList.toggle('has-error', !lastname.value.trim());
-  if (!lastname.value.trim()) valid = false;
-  const emailVal = email.value.trim();
-  if (emailVal) {
-    const emailValid = /\S+@\S+\.\S+/.test(emailVal);
-    fg_email.classList.toggle('has-error', !emailValid);
-    if (!emailValid) valid = false;
-  } else {
-    fg_email.classList.remove('has-error');
-  }
-  if (!valid) return;
-
-  // Check localStorage — prevent double submission on same device
-  if (localStorage.getItem('temidunUserRSVPed')) {
-    document.getElementById('rsvpWrapper').innerHTML =
-      `<div class="rsvp-already">You've already RSVPed! 🎉<br>
-       <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
-    return;
-  }
-
-  // Show loading state
-  const btn = document.querySelector('.btn-rsvp');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  try {
-    const payload = {
-      firstname: firstname.value.trim(),
-      lastname: lastname.value.trim(),
-      email: email.value.trim().toLowerCase(),
-      phone: document.getElementById('rsvp-phone').value.trim(),
-      message: document.getElementById('rsvp-msg').value.trim()
-    };
-
-    const res = await fetch(SHEET_URL, {
-      method: 'POST',
-      body: JSON.stringify(payload)
-    });
-    const result = await res.json();
-
-    if (result.status === 'duplicate') {
-      // Already in the Sheet — still mark locally and show thank you
-      localStorage.setItem('temidunUserRSVPed', 'true');
-      openModal('thankYouModal');
-      document.getElementById('rsvpWrapper').innerHTML =
-        `<div class="rsvp-already">You've already RSVPed! 🎉<br>
-         <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
-
-    } else if (result.status === 'success') {
-      localStorage.setItem('temidunUserRSVPed', 'true');
-      openModal('thankYouModal');
-      document.getElementById('rsvpWrapper').innerHTML =
-        `<div class="rsvp-already">You've already RSVPed! 🎉<br>
-         <span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
-
-    } else {
-      throw new Error('Unexpected response');
-    }
-
-  } catch (err) {
-    btn.textContent = 'Confirm My Attendance ✨';
-    btn.disabled = false;
-    alert('Something went wrong. Please try again or contact us directly.');
-  }
-});
-
-// ── MODALS ────────────────────────────────────────────────────────────────────
-function openModal(id) { document.getElementById(id).classList.add('open'); }
-function closeModal(id) { document.getElementById(id).classList.remove('open'); }
-document.querySelectorAll('.modal-overlay').forEach(o => {
-  o.addEventListener('click', e => { if(e.target===o) o.classList.remove('open'); });
-});
-
-const ACCOUNT_DETAILS = {
-  naira: {
-    full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK',
-    name: 'TEMITOPE AWOSIKU',
-    number: '3157355320',
-    bank: 'FIRST BANK'
-  },
-  dollar: {
-    full: 'Account name: GOODNESS DUNSIN FOLAYAN\nAccount Number: 218095108511\nACH Routing Number: 101019644\nBank Name: LEAD BANK',
-    name: 'GOODNESS DUNSIN FOLAYAN',
-    number: '218095108511',
-    routing: '101019644',
-    bank: 'LEAD BANK'
-  }
-};
-function regCopyAcct(type = 'naira', btn) {
-  const text = ACCOUNT_DETAILS[type]?.full || ACCOUNT_DETAILS.naira.full;
-  copyText(text, btn);
-}
-function copyDetail(type = 'naira', field = 'name', btn) {
-  const text = ACCOUNT_DETAILS[type]?.[field] || '';
-  copyText(text, btn);
-}
-function copyText(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
-    if (btn) {
-      const original = btn.innerHTML;
-      btn.innerHTML = '✓';
-      btn.classList.add('copied');
-      setTimeout(() => {
-        btn.innerHTML = original;
-        btn.classList.remove('copied');
-      }, 1600);
-    }
-  }).catch(() => { alert(text); });
-}
-
-/* ===== REGISTRY LOGIC — pasted from MeetTheTemiduns.html ===== */
+/* ===== REGISTRY LOGIC — paste inside your <script> block ===== */
+/* Set this to your deployed Apps Script Web App URL */
 const REGISTRY_URL = 'https://script.google.com/macros/s/AKfycbzj7OUPTaN22W1rQ2jHbRhY0KACBoO-RDA9rU0b57el-5kX08yiKxX4DlRy_3BgeR9ONQ/exec';
 const NAIRA = n => '₦' + Number(n||0).toLocaleString();
 const kFmt  = n => n>=1000 ? '₦'+Math.round(n/1000)+'k' : NAIRA(n);
@@ -1366,7 +1132,6 @@ let REG_STATE = { items: [] };
 
 async function loadRegistry() {
   const grid = document.getElementById('regGrid');
-  if (!grid) return;
   try {
     const res = await fetch(REGISTRY_URL + '?action=registry');
     const data = await res.json();
@@ -1443,6 +1208,7 @@ async function submitPledge() {
     });
     const data = await res.json();
     if (data.status === 'success') {
+      // Pledge recorded privately; public bar updates only after we confirm payment.
       closeModal('pledgeModal');
       showPledgeThanks();
     } else throw new Error();
@@ -1453,136 +1219,165 @@ async function submitPledge() {
 }
 
 function showPledgeThanks() {
-  const m = document.getElementById('thankYouModal');
-  const title = m.querySelector('.modal-title');
-  const text  = m.querySelector('.modal-text');
-  if (title) title.textContent = 'Thank you — gift noted!';
-  if (text) text.innerHTML = "Please complete your transfer if you haven't yet. "
+  var m = document.getElementById('thankYouModal');
+  var title = m.querySelector('.modal-title');
+  var text  = m.querySelector('.modal-text');
+  if (title) title.textContent = 'Thank you \u2014 gift noted!';
+  if (text)  text.innerHTML = "Please complete your transfer if you haven't yet. "
     + 'Once we confirm it in our records, your gift will count toward the item.'
-    + '<br><br>Your details stay private. 💛';
+    + '<br><br>Your details stay private. \uD83D\uDC9B';
   openModal('thankYouModal');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('regGrid')) loadRegistry();
+function regCopyAcct() {
+  navigator.clipboard.writeText('[BANK ACCOUNT NUMBER]').then(()=>{
+    document.querySelectorAll('.reg-copy').forEach(b=>{
+      const t=b.textContent; b.textContent='Copied!'; b.classList.add('copied');
+      setTimeout(()=>{b.textContent=t;b.classList.remove('copied');},2000);
+    });
+  });
+}
+
+/* load when the page opens */
+document.addEventListener('DOMContentLoaded', loadRegistry);
+
+
+// ── COUNTDOWN ────────────────────────────────────────────────────────────────
+(function countdown() {
+  const target = new Date('2026-11-21T10:00:00');
+  function tick() {
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) { document.getElementById('countdown').innerHTML = '<div class="countdown-unit"><span class="countdown-num">🎊</span><span class="countdown-label">We\'re Married!</span></div>'; return; }
+    const d = Math.floor(diff/864e5);
+    const h = Math.floor((diff%864e5)/36e5);
+    const m = Math.floor((diff%36e5)/6e4);
+    const s = Math.floor((diff%6e4)/1e3);
+    document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-hrs').textContent  = String(h).padStart(2,'0');
+    document.getElementById('cd-min').textContent  = String(m).padStart(2,'0');
+    document.getElementById('cd-sec').textContent  = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+// ── NAV ──────────────────────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+const ham = document.getElementById('hamburger');
+const menu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  menu.classList.toggle('open');
+});
+document.querySelectorAll('.mobile-link').forEach(a => {
+  a.addEventListener('click', () => { ham.classList.remove('open'); menu.classList.remove('open'); });
 });
 
-// ── LIGHTBOX ───────────────────────────────────────────────────────────────────
-const galleryImages = [
-  'images/20260529_132151.jpg',
-  'images/IMG_5515.JPG',
-  'images/IMG_5519.JPG',
-  'images/IMG_5566.JPG',
-  'images/IMG_5570.JPG'
-];
-
-function openLightbox(i) {
-  const modal = document.getElementById('lightboxModal');
-  const icon = modal.querySelector('.modal-icon');
-  const title = modal.querySelector('.modal-title');
-  const text = modal.querySelector('.modal-text');
-  const src = galleryImages[i] || galleryImages[0];
-
-  // Show full image sized to viewport while preserving aspect ratio
-  icon.innerHTML = `<img src="${src}" alt="Gallery photo ${i + 1}" style="max-width:90vw;max-height:90vh;width:auto;height:auto;object-fit:contain;display:block;margin:0 auto;border-radius:8px;">`;
-  title.textContent = `Photo ${i + 1}`;
-  text.textContent = 'Tap outside or press × to close.';
-  openModal('lightboxModal');
-}
-
-// ── GALLERY SLIDESHOW ──────────────────────────────────────────────────────
-let gallerySlides = [];
-let galleryDots = null;
-let currentGalleryIndex = 0;
-
-function setGallerySlide(index) {
-  gallerySlides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
+// ── SCROLL REVEAL ─────────────────────────────────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i*120);
+      observer.unobserve(e.target);
+    }
   });
-  if (galleryDots) {
-    Array.from(galleryDots.children).forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-  }
-  currentGalleryIndex = index;
-}
+}, { threshold:0.12 });
+document.querySelectorAll('.reveal, .timeline-card, .event-card, .gift-card, .travel-card, .faq-item').forEach(el => observer.observe(el));
 
-function createGalleryDots() {
-  if (!galleryDots) return;
-  galleryImages.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => setGallerySlide(i));
-    galleryDots.appendChild(dot);
+// ── FAQ ACCORDION ─────────────────────────────────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
   });
+});
+
+// ── RSVP ─────────────────────────────────────────────────────────────────────
+const rsvps = JSON.parse(localStorage.getItem('temidunRSVPs') || '[]');
+const userRSVPed = localStorage.getItem('temidunUserRSVPed');
+
+if(userRSVPed) {
+  document.getElementById('rsvpWrapper').innerHTML = `<div class="rsvp-already">You've already RSVPed! 🎉<br><span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
 }
+updateBadge();
 
-function renderGallerySlides() {
-  const container = document.getElementById('gallerySlider');
-  if (!container) return;
-  container.innerHTML = '';
+document.getElementById('rsvpForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  const name = document.getElementById('rsvp-name');
+  const email = document.getElementById('rsvp-email');
+  const fg_name = document.getElementById('fg-name');
+  const fg_email = document.getElementById('fg-email');
+  const eventsErr = document.getElementById('events-error');
+  const checked = [...document.querySelectorAll('input[name=events]:checked')].map(c=>c.value);
 
-  galleryImages.forEach((src, index) => {
-    const slide = document.createElement('button');
-    slide.type = 'button';
-    slide.className = 'gallery-slide' + (index === 0 ? ' active' : '');
-    slide.style.backgroundImage = `url('${src}')`;
-    slide.setAttribute('aria-label', `Open photo ${index + 1}`);
-    slide.setAttribute('tabindex', '0');
-    slide.addEventListener('click', () => openLightbox(index));
-    slide.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openLightbox(index);
-      }
-    });
-    container.appendChild(slide);
-  });
+  fg_name.classList.toggle('has-error', !name.value.trim()); if(!name.value.trim()) valid=false;
+  fg_email.classList.toggle('has-error', !/\S+@\S+\.\S+/.test(email.value)); if(!/\S+@\S+\.\S+/.test(email.value)) valid=false;
+  eventsErr.style.display = checked.length ? 'none' : 'block'; if(!checked.length) valid=false;
 
-  const dotWrapper = document.createElement('div');
-  dotWrapper.id = 'galleryDots';
-  dotWrapper.className = 'gallery-dots';
-  container.appendChild(dotWrapper);
-}
+  if(!valid) return;
 
-function startGallerySlideshow() {
-  renderGallerySlides();
-  gallerySlides = Array.from(document.querySelectorAll('.gallery-slide'));
-  galleryDots = document.getElementById('galleryDots');
-  const container = document.getElementById('gallerySlider');
-  if (!gallerySlides.length || !galleryDots || !container) return;
-  createGalleryDots();
-
-  setGallerySlide(0);
-
-  // Autoplay timer (can be paused on hover)
-  let slideshowTimer = null;
-  const advance = () => {
-    const nextIndex = (currentGalleryIndex + 1) % gallerySlides.length;
-    setGallerySlide(nextIndex);
+  const entry = {
+    name: name.value, email: email.value,
+    phone: document.getElementById('rsvp-phone').value,
+    guests: document.getElementById('rsvp-guests').value,
+    events: checked, diet: document.getElementById('rsvp-diet').value,
+    message: document.getElementById('rsvp-msg').value,
+    timestamp: new Date().toISOString()
   };
-  const startTimer = () => { if (!slideshowTimer) slideshowTimer = setInterval(advance, 4500); };
-  const stopTimer  = () => { if (slideshowTimer) { clearInterval(slideshowTimer); slideshowTimer = null; } };
+  rsvps.push(entry);
+  localStorage.setItem('temidunRSVPs', JSON.stringify(rsvps));
+  localStorage.setItem('temidunUserRSVPed','true');
+  updateBadge();
+  openModal('thankYouModal');
+  document.getElementById('rsvpWrapper').innerHTML = `<div class="rsvp-already">You've already RSVPed! 🎉<br><span style="font-size:1rem;color:var(--gold);font-style:italic">#MeetTheTemiduns</span></div>`;
+});
 
-  // Start autoplay
-  startTimer();
-
-  // Pause on hover / resume on leave
-  container.addEventListener('mouseenter', stopTimer);
-  container.addEventListener('mouseleave', startTimer);
+function updateBadge() {
+  const count = JSON.parse(localStorage.getItem('temidunRSVPs')||'[]').length;
+  const badge = document.getElementById('rsvpBadge');
+  if(count > 0) { badge.style.display='block'; badge.textContent=`${count} RSVP${count>1?'s':''}  ·  Admin`; }
+}
+function getRSVPSummary() {
+  const r = JSON.parse(localStorage.getItem('temidunRSVPs')||'[]');
+  if(!r.length) return 'No RSVPs yet.';
+  return r.map((e,i)=>`${i+1}. ${e.name} (${e.guests} guest${e.guests>1?'s':''}) — ${e.events.join(', ')}`).join('\n');
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', startGallerySlideshow);
-} else {
-  startGallerySlideshow();
+// ── MODALS ────────────────────────────────────────────────────────────────────
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-overlay').forEach(o => {
+  o.addEventListener('click', e => { if(e.target===o) o.classList.remove('open'); });
+});
+
+// ── COPY ACCOUNT ──────────────────────────────────────────────────────────────
+function copyAccount() {
+  navigator.clipboard.writeText('[BANK ACCOUNT NUMBER]').then(() => {
+    const btn = document.getElementById('copyBtn');
+    if(btn) { btn.classList.add('copied'); btn.innerHTML='<span>✅</span> Copied!'; setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='<span>📋</span> Copy Account Number';},2500); }
+  }).catch(()=>{ alert('Account Number: [BANK ACCOUNT NUMBER]'); });
 }
+
+// ── WISHLIST MODAL ────────────────────────────────────────────────────────────
+function showWishlistModal(name,desc,price) {
+  document.getElementById('wishlist-modal-title').textContent = name;
+  document.getElementById('wishlist-modal-desc').textContent = desc;
+  document.getElementById('wishlist-modal-price').textContent = price;
+  openModal('wishlistModal');
+}
+
+// ── LIGHTBOX ───────────────────────────────────────────────────────────────────
+function openLightbox(i) { openModal('lightboxModal'); }
 
 // ── ICS DOWNLOAD ──────────────────────────────────────────────────────────────
 function downloadICS(title, dateStr) {
-  const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261120';
-  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Temitope & Dunsin\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
+  const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261121';
+  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Goodness & Temitope\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
   const blob = new Blob([ics],{type:'text/calendar'});
   const a = Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`MeetTheTemiduns_${title.replace(/\s+/g,'_')}.ics`});
   a.click();
