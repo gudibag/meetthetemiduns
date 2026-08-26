@@ -215,6 +215,29 @@
       .hero, .registry-section, .account-card { padding: 18px; }
       .account-grid { grid-template-columns: 1fr; }
     }
+
+    .jump-payment {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 500;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--teal), var(--gold));
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: 0 12px 28px rgba(31,122,111,0.28);
+      cursor: pointer;
+      display: none;
+    }
+    .jump-payment.show { display: inline-flex; }
+    @media (max-width: 640px) {
+      .jump-payment { right: 14px; bottom: 14px; padding: 10px 14px; font-size: 0.8rem; }
+    }
   </style>
 </head>
 <body>
@@ -241,7 +264,7 @@
       </div>
     </header>
 
-    <section class="account-grid" aria-label="Bank details">
+    <section class="account-grid" id="payment" aria-label="Bank details">
       <div class="account-card">
         <h4>Naira Payments</h4>
         <div class="detail-list">
@@ -259,6 +282,23 @@
             <strong>Bank name</strong>
             <div class="detail-value">FIRST BANK</div>
             <button class="inline-copy-btn" onclick="copyDetail('naira', 'bank', this)" aria-label="Copy bank name">📋</button>
+          </div>
+          <div style="height:8px"></div>
+          <div style="font-size:0.85rem;color:var(--mid);margin-top:6px;margin-bottom:6px">Also (alternate Naira account)</div>
+          <div class="detail-row">
+            <strong>Account name</strong>
+            <div class="detail-value">Goodness D. Folayan</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'altName', this)" aria-label="Copy alternate account name">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Account number</strong>
+            <div class="detail-value">3087842349</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'altNumber', this)" aria-label="Copy alternate account number">📋</button>
+          </div>
+          <div class="detail-row">
+            <strong>Bank name</strong>
+            <div class="detail-value">FIRST BANK</div>
+            <button class="inline-copy-btn" onclick="copyDetail('naira', 'altBank', this)" aria-label="Copy alternate bank name">📋</button>
           </div>
         </div>
       </div>
@@ -340,13 +380,29 @@
     </div>
   </div>
 
+  <button class="jump-payment" id="jumpPayment" onclick="document.getElementById('payment').scrollIntoView({behavior:'smooth'})" aria-label="Jump to payment details">💳 Payment details</button>
+
+  <script>
+    (function () {
+      const paymentSection = document.getElementById('payment');
+      const jumpBtn = document.getElementById('jumpPayment');
+      if (paymentSection && jumpBtn && 'IntersectionObserver' in window) {
+        new IntersectionObserver(([entry]) => {
+          jumpBtn.classList.toggle('show', !entry.isIntersecting);
+        }, { threshold: 0 }).observe(paymentSection);
+      }
+    })();
+  </script>
   <script>
     const ACCOUNT_DETAILS = {
       naira: {
-        full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK',
-        name: 'TEMITOPE AWOSIKU',
-        number: '3157355320',
-        bank: 'FIRST BANK'
+          full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK\n\nAccount name: Goodness D. Folayan\nAccount number: 3087842349\nBank name: First bank Nig',
+          name: 'TEMITOPE AWOSIKU',
+          number: '3157355320',
+          bank: 'FIRST BANK',
+          altName: 'Goodness D. Folayan',
+          altNumber: '3087842349',
+          altBank: 'FIRST BANK'
       },
       dollar: {
         full: 'Account name: GOODNESS DUNSIN FOLAYAN\nAccount Number: 218095108511\nACH Routing Number: 101019644\nBank Name: LEAD BANK',

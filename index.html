@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>#MeetTheTemiduns — Temitope & Dunsin </title>
+<meta name="description" content="Temitope & Dunsin are getting married on November 20, 2026 in Ondo Town, Nigeria. RSVP, gift registry, and all the details.">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="#MeetTheTemiduns — Temitope & Dunsin">
+<meta property="og:description" content="We're getting married! November 20, 2026 · Ondo Town, Nigeria. RSVP and join our celebration.">
+<meta property="og:image" content="https://gudibag.github.io/meetthetemiduns/images/IMG_5515.JPG">
+<meta property="og:url" content="https://gudibag.github.io/meetthetemiduns/">
+<meta property="og:site_name" content="#MeetTheTemiduns">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="#MeetTheTemiduns — Temitope & Dunsin">
+<meta name="twitter:description" content="We're getting married! November 20, 2026 · Ondo Town, Nigeria. RSVP and join our celebration.">
+<meta name="twitter:image" content="https://gudibag.github.io/meetthetemiduns/images/IMG_5515.JPG">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -302,6 +318,10 @@ section { padding: 100px 24px; }
   transition:background .2s, color .2s;
 }
 .btn-cal:hover { background:var(--gold); color:#fff; }
+.cal-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+.cal-actions .btn-cal { margin-top:0; }
+.btn-cal-google { border-color:var(--teal-dk); color:var(--teal-dk); }
+.btn-cal-google:hover { background:var(--teal-dk); color:#fff; }
 
 /* ─── RSVP ────────────────────────────────────────────────────────────────── */
 #rsvp {
@@ -883,7 +903,10 @@ footer {
             <span class="event-detail-icon">👗</span>
             <div class="event-detail-text"><strong>Dress Code</strong>Formal / Semi-formal</div>
           </div>
-          <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261120')">+ Add to Calendar</button>
+          <div class="cal-actions">
+            <a class="btn-cal btn-cal-google" href="#" onclick="addToGoogleCalendar('White Wedding — #MeetTheTemiduns','20261120T100000Z','20261120T130000Z','White Wedding Ceremony — #MeetTheTemiduns','Our Lady of Lourdes Catholic Church, Akinjagunla, Ondo City');return false;">+ Google Calendar</a>
+            <button class="btn-cal" onclick="downloadICS('White Wedding — #MeetTheTemiduns','20261120T100000Z','20261120T130000Z','Our Lady of Lourdes Catholic Church\\, Akinjagunla\\, Ondo City','White Wedding Ceremony — #MeetTheTemiduns')">⬇ Apple / Outlook</button>
+          </div>
         </div>
       </div>
       <div class="event-card reveal">
@@ -908,7 +931,10 @@ footer {
             <span class="event-detail-icon">👗</span>
             <div class="event-detail-text"><strong>Dress Code</strong>Aso-Ebi / Traditional Attire</div>
           </div>
-          <button class="btn-cal" onclick="downloadICS('Traditional Wedding','20261120')">+ Add to Calendar</button>
+          <div class="cal-actions">
+            <a class="btn-cal btn-cal-google" href="#" onclick="addToGoogleCalendar('Traditional Wedding — #MeetTheTemiduns','20261120T070000Z','20261120T100000Z','Traditional Wedding Ceremony — #MeetTheTemiduns','Labim Hotel, Ondo Town, Nigeria');return false;">+ Google Calendar</a>
+            <button class="btn-cal" onclick="downloadICS('Traditional Wedding — #MeetTheTemiduns','20261120T070000Z','20261120T100000Z','Labim Hotel\\, Ondo Town\\, Nigeria','Traditional Wedding Ceremony — #MeetTheTemiduns')">⬇ Apple / Outlook</button>
+          </div>
         </div>
       </div>
     </div>
@@ -985,6 +1011,23 @@ footer {
           <div class="reg-detail-value">FIRST BANK</div>
           <button class="reg-detail-copy" onclick="copyDetail('naira', 'bank', this)" aria-label="Copy bank name">📋</button>
         </div>
+          <div style="height:8px"></div>
+          <div style="font-size:0.85rem;color:var(--mid);margin-top:6px;margin-bottom:6px">Also (alternate Naira account)</div>
+          <div class="reg-detail-row">
+            <div class="reg-detail-label">Account name</div>
+            <div class="reg-detail-value">Goodness D. Folayan</div>
+            <button class="reg-detail-copy" onclick="copyDetail('naira', 'altName', this)" aria-label="Copy account name">📋</button>
+          </div>
+          <div class="reg-detail-row">
+            <div class="reg-detail-label">Account number</div>
+            <div class="reg-detail-value">3087842349</div>
+            <button class="reg-detail-copy" onclick="copyDetail('naira', 'altNumber', this)" aria-label="Copy account number">📋</button>
+          </div>
+          <div class="reg-detail-row">
+            <div class="reg-detail-label">Bank name</div>
+            <div class="reg-detail-value">FIRST BANK</div>
+            <button class="reg-detail-copy" onclick="copyDetail('naira', 'altBank', this)" aria-label="Copy bank name">📋</button>
+          </div>
       </div>
     </div>
     <div class="reg-account">
@@ -1351,10 +1394,13 @@ document.querySelectorAll('.modal-overlay').forEach(o => {
 
 const ACCOUNT_DETAILS = {
   naira: {
-    full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK',
+    full: 'Account name: TEMITOPE AWOSIKU\nAccount number: 3157355320\nBank name: FIRST BANK\n\nAccount name: Goodness D. Folayan\nAccount number: 3087842349\nBank name: First bank Nig',
     name: 'TEMITOPE AWOSIKU',
     number: '3157355320',
-    bank: 'FIRST BANK'
+    bank: 'FIRST BANK',
+    altName: 'Goodness D. Folayan',
+    altNumber: '3087842349',
+    altBank: 'FIRST BANK'
   },
   dollar: {
     full: 'Account name: GOODNESS DUNSIN FOLAYAN\nAccount Number: 218095108511\nACH Routing Number: 101019644\nBank Name: LEAD BANK',
@@ -1607,13 +1653,21 @@ if (document.readyState === 'loading') {
   startGallerySlideshow();
 }
 
-// ── ICS DOWNLOAD ──────────────────────────────────────────────────────────────
-function downloadICS(title, dateStr) {
-  const d = dateStr.replace(/\D/g,'').substring(0,8) || '20261120';
-  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${d}T100000Z\r\nDTEND:${d}T200000Z\r\nSUMMARY:${title}\r\nDESCRIPTION:#MeetTheTemiduns — Temitope & Dunsin\r\nLOCATION:Ondo Town\\, Nigeria\r\nEND:VEVENT\r\nEND:VCALENDAR`;
+// ── ADD TO CALENDAR ────────────────────────────────────────────────────────────
+function downloadICS(title, startUTC, endUTC, location, description) {
+  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MeetTheTemiduns//EN\r\nBEGIN:VEVENT\r\nDTSTART:${startUTC}\r\nDTEND:${endUTC}\r\nSUMMARY:${title}\r\nDESCRIPTION:${description}\r\nLOCATION:${location}\r\nEND:VEVENT\r\nEND:VCALENDAR`;
   const blob = new Blob([ics],{type:'text/calendar'});
-  const a = Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`MeetTheTemiduns_${title.replace(/\s+/g,'_')}.ics`});
+  const a = Object.assign(document.createElement('a'),{href:URL.createObjectURL(blob),download:`MeetTheTemiduns_${title.replace(/[^\w]+/g,'_')}.ics`});
   a.click();
+}
+
+function addToGoogleCalendar(title, startUTC, endUTC, description, location) {
+  const url = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent(title)
+    + '&dates=' + startUTC + '/' + endUTC
+    + '&details=' + encodeURIComponent(description)
+    + '&location=' + encodeURIComponent(location);
+  window.open(url, '_blank', 'noopener');
 }
 </script>
 </body>
